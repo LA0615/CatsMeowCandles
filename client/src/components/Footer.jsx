@@ -35,7 +35,7 @@ const Footer = () => {
             <h5>Contact Us:</h5>
             <p>New Jersey</p>
             <p>
-              <a href="mailto:info@company.com">info@company.com</a>
+              <a href="mailto:info@company.com">Email</a>
             </p>
           </div>
           <div className="col">
