@@ -1,0 +1,24 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .nav-group {
+    display: flex;
+  }
+  
+  .nav-link {
+    position: relative;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: medium;
+  }
+  
+ .nav-group .nav-link:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -5px;
+    color: blue;
+  }
