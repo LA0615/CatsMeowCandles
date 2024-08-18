@@ -1,9 +1,8 @@
-//import Footer from "../components/Footer";
-
 //TO DO:
 //STYLE THE HOME PAGE
 //ADD A CAROUSEL
 //ADD A FEATURED PRODUCT SECTION
+//ADD ABOUT BLURB
 
 const Home = () => {
   return (

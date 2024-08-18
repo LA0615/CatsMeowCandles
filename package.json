@@ -15,9 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
     "jwt-decode": "^4.0.0",
-    "react-router-dom": "^6.26.0"
+    "react-router-dom": "^6.26.1"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",

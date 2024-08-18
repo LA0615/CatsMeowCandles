@@ -8,14 +8,13 @@ const Header = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
+         
           <li>
             <Link to="/shop">Shop</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+          <a href="mailto:live2run615@gmail.com?Subject=Contact%20from%20Website" target="_blank" rel="noopener noreferrer">Contact</a>
+
           </li>
           <li>
             <Link to="/login">Login</Link>
