@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -8,8 +10,8 @@ const Footer = () => {
           <div className="col">
             <h5>Cat&apos;s Meow Candles:</h5>
             <p>
-              Our mission is to provide the best candles, waxmelts, and tealights
-              to our customers.
+              Our mission is to provide the best candles, waxmelts, and
+              tealights to our customers.
             </p>
           </div>
           <div className="col">
@@ -18,14 +20,44 @@ const Footer = () => {
               <li>
                 <Link to="/about">About Us</Link>
               </li>
-              <a
-                href="mailto:live2run615@gmail.com?Subject=Contact%20from%20Website"
-                target="_blank"
-                rel="noopener noreferrer"
+              <li
+                style={{
+                  displya: "inline-flex",
+                  alignItems: "center",
+                  listStyleType: "disc",
+                }}
               >
-                Contact
-              </a>
-
+                <a
+                  href="mailto:live2run615@gmail.com?Subject=Contact%20from%20Website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    textDecoration: "none",
+                  }}
+                >
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    style={{
+                      fontSize: "1.2em",
+                      color: "blue",
+                      marginRight: "0.4em",
+                      width: "1.2em",
+                      height: "1.0em",
+                    }}
+                  />
+                  <span
+                    style={{
+                      color: "black",
+                      fontWeight: "bolder",
+                      fontSize: "1.1em",
+                    }}
+                  >
+                    Contact
+                  </span>
+                </a>
+              </li>
               <li>
                 <Link to="/privacy">Privacy Policy</Link>
               </li>
@@ -44,7 +76,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center py-3">
-          © {new Date().getFullYear()} Cat&apos;s Meow Candles. All rights reserved.
+          © {new Date().getFullYear()} Cat&apos;s Meow Candles. All rights
+          reserved.
         </div>
       </div>
     </footer>
