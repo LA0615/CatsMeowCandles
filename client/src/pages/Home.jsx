@@ -18,14 +18,14 @@ const Home = () => {
         </p>
         <p>
           Our seasonal items are a hit among our customers, and we are always
-          excited to introduce new and exciting products. Stay tuned for our
+          excited to introduce new and exciting products. Checkout our
           featured product section where we highlight some of our bestsellers
-          and new arrivals.
+          and seasonal arrivals.
         </p>
         <p>
           Thank you for visiting our website. We hope you find something you
-          love! You can also check us out on Etsy and Instagram. If you are
-          local, please stop into The Spot and check out our products in person
+          love! You can also check us out on <a href="https://catsmeowcandles.etsy.com" target="_blank" rel="noopener noreferrer">Etsy</a> and <a href="https://www.instagram.com/catsmeowcandles/" target="_blank" rel="noopener noreferrer">Instagram</a>. If you are
+          local, please stop into <a href= "https://www.spotattheave.com/" target="_blank" rel="noopener noreferr">The Spot </a> and check out our products in person
           at my booth.
         </p>
       </section>
