@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <h5>Cat&apos;s Meow Candles:</h5>
+            <h5>&quot;Candles That Do More Than Light, They Delight&quot;</h5>
             <p>
-              Our mission is to provide the best candles, waxmelts, and
-              tealights to our customers.
+              Our mission is to offer superior candles, wax melts, and tealights that bring not just light, 
+              but a delightful experience to every moment.
             </p>
           </div>
           <div className="col">
