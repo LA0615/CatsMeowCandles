@@ -1,13 +1,11 @@
 //TO DO:
-//STYLE THE HOME PAGE
 //ADD A CAROUSEL waxmelts, regular candles, food candles, tealights and other pictures.
 //ADD A FEATURED PRODUCT SECTION seasonal items?
-//ADD ABOUT BLURB and link it to the ABOUT US quick links on the footer section
 import "./Home.css";
 const Home = () => {
   return (
     <div className="home-container">
-      <section className="about-section">
+      <section id="about-us" className="about-section">
         <h2>About Us</h2>
         <p>
           Welcome to Cat&apos;s Meow Candles! We specialize in creating unique,
@@ -25,8 +23,8 @@ const Home = () => {
         <p>
           Thank you for visiting our website. We hope you find something you
           love! You can also check us out on <a href="https://catsmeowcandles.etsy.com" target="_blank" rel="noopener noreferrer">Etsy</a> and <a href="https://www.instagram.com/catsmeowcandles/" target="_blank" rel="noopener noreferrer">Instagram</a>. If you are
-          local, please stop into <a href= "https://www.spotattheave.com/" target="_blank" rel="noopener noreferr">The Spot </a> and check out our products in person
-          at my booth.
+          local, please stop into <a href= "https://www.spotattheave.com/" target="_blank" rel="noopener noreferr">The Spot </a> and check out our products in person.
+        
         </p>
       </section>
     </div>
