@@ -1,9 +1,16 @@
+import  { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  useEffect(() => {
+    const contactLink = document.getElementById("header-contact-link");
+    const email = atob('bGl2ZTJydW42MTVAZ21haWwuY29t'); // Base64 encoded email to prevent spam bots
+    contactLink.href = `mailto:${email}?Subject=Contact%20from%20Website`;
+  }, []);
+
   return (
     <header className="container-fluid">
       <div className="d-flex flex-column align-items-center vh-100 justify-content-center">
@@ -20,10 +27,10 @@ const Header = () => {
               Shop
             </Link>
             <a
-              href="mailto:live2run615@gmail.com?Subject=Contact%20from%20Website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-link"
+            id="header-contact-link"
+            className="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
             >
               Contact
             </a>

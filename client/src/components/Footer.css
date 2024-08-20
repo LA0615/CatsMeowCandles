@@ -1,0 +1,96 @@
+/* Footer.css */
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    padding-bottom: 40px;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 5px 0;
+    text-align: center;
+    z-index: 1000;
+    border-top: 3px dashed lightgray;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer h5 {
+    font-weight: bolder;
+    font-size: medium;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    margin: 2px 0;
+
+}
+
+.footer p {
+    max-width: 600px;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 4px 0;
+    font-style: italic;
+    font-weight: normal;
+    color: lightblack;
+
+}
+
+
+
+.quick-links-section {
+    align-items: center;
+    list-style-type: disc;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.quick-links-section h5 {
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.quick-links-list {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 0px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.quick-links-list li {
+    margin-bottom: 1px;
+    padding-left: 0;
+    margin-left: 10px;
+}
+
+
+
+.about-us-link {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.copyright {
+    font-size: 0.8em;
+    color: #000000; 
+}

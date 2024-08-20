@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import "./Footer.css";
 
 const Footer = () => {
+  useEffect(() => {
+    const contactLink = document.getElementById("contact-link");
+    const email = atob('bGl2ZTJydW42MTVAZ21haWwuY29t'); // Base64 encoded email to prevent spam bots
+    contactLink.href = `mailto:${email}?Subject=Contact%20from%20Website`;
+  }, []);
+
   return (
     <footer className="footer">
       <div className="container">
@@ -10,52 +18,37 @@ const Footer = () => {
           <div className="col">
             <h5>&quot;Candles That Do More Than Light, They Delight&quot;</h5>
             <p>
-              Our mission is to offer superior candles, wax melts, and tealights that bring not just light, 
-              but a delightful experience to every moment.
+              Our mission is to offer superior candles, wax melts, and tealights
+              that bring not just light, but a delightful experience to every
+              moment.
             </p>
           </div>
-          <div className="col">
+          <div className="col quick-links-section">
             <h5>Quick Links:</h5>
-            <ul>
+            <ul className="quick-links-list">
               <li>
-                <Link to="/about">About Us</Link>
+                <a href="/#about-us" className="quick-link about-us-link">
+                  About Us
+                </a>
               </li>
-              <li
-                style={{
-                  displya: "inline-flex",
-                  alignItems: "center",
-                  listStyleType: "disc",
-                }}
-              >
+              <li>
                 <a
-                  href="mailto:live2run615@gmail.com?Subject=Contact%20from%20Website"
+                  id="contact-link"
+                  className="quick-link contact-link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    textDecoration: "none",
-                  }}
                 >
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     style={{
                       fontSize: "1.2em",
-                      color: "blue",
+                      color: "Black",
                       marginRight: "0.4em",
                       width: "1.2em",
                       height: "1.0em",
                     }}
                   />
-                  <span
-                    style={{
-                      color: "black",
-                      fontWeight: "bolder",
-                      fontSize: "1.1em",
-                    }}
-                  >
-                    Contact
-                  </span>
+                  Contact Us:
                 </a>
               </li>
               <li>
@@ -63,19 +56,14 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col">
-            <h5>Contact Us:</h5>
-            <p>New Jersey</p>
-            <p>
-              <a href="mailto:info@company.com">Email</a>
-            </p>
-          </div>
+
           <div className="col">
             <h5>Follow Us:</h5>
+            <p>Etsy Instagram  The Spot</p>
             {/* Social icons here Etsy, The Spot, Instagram */}
           </div>
         </div>
-        <div className="text-center py-3">
+        <div className="text-center py-3 copyright">
           © {new Date().getFullYear()} Cat&apos;s Meow Candles. All rights
           reserved.
         </div>
