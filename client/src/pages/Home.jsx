@@ -2,6 +2,7 @@
 //ADD A CAROUSEL waxmelts, regular candles, food candles, tealights and other pictures.
 //ADD A FEATURED PRODUCT SECTION seasonal items?
 import "./Home.css";
+
 const Home = () => {
   return (
     <div className="home-container">

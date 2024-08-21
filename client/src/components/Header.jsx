@@ -2,6 +2,7 @@ import  { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import "./Header.css";
+
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
@@ -31,6 +32,8 @@ const Header = () => {
             className="nav-link"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Contact"
+
             >
               Contact
             </a>
@@ -58,3 +61,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

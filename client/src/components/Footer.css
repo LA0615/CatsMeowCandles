@@ -1,96 +1,68 @@
 /* Footer.css */
 
-body,
-html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.main-content {
-    flex: 1;
-    padding-bottom: 40px;
-}
-
 .footer {
-    background-color: #f8f9fa;
-    padding: 5px 0;
+    width:100%;
+    padding: 20px 0; /* Increased padding for better spacing */
     text-align: center;
     z-index: 1000;
     border-top: 3px dashed lightgray;
-}
-
-.footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-sizing: border-box;
 }
 
 .footer h5 {
     font-weight: bolder;
     font-size: medium;
-    margin-bottom: 5px;
-    text-align: center;
+    margin: 0 0 10px 0; /* Adjusted margin for better spacing */
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    margin: 2px 0;
-
 }
-
+.footer-content {
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width as needed for large screens */
+    margin: 0 auto;
+    padding: 0 15px; /* Adjust padding as needed */
+  }
+  
 .footer p {
     max-width: 600px;
     word-wrap: break-word;
     text-align: center;
-    margin: 4px 0;
+    margin: 0 auto; /* Center the paragraph within its container */
     font-style: italic;
-    font-weight: normal;
-    color: lightblack;
-
+    color: black;
+    font-size: 1em;
+    line-height: 1.5; /* Added line-height for better readability */
 }
 
-
-
-.quick-links-section {
-    align-items: center;
-    list-style-type: disc;
-    font-size: medium;
-    font-weight: bold;
+.quick-links-section,
+.follow-us-section {
+    margin: 20px 0; /* Added margin to separate sections */
 }
 
-.quick-links-section h5 {
-    font-weight: bold;
-    font-size: medium;
-    margin-bottom: 5px;
-    margin-left: 20px;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-}
-
-.quick-links-list {
-    list-style-type: disc;
-    list-style-position: inside;
-    padding-left: 0px;
+.quick-links-list,
+.follow-us-list {
+    list-style-type: none; /* Removed default list styling */
+    padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px; /* Increased gap for better spacing */
 }
 
-.quick-links-list li {
-    margin-bottom: 1px;
-    padding-left: 0;
-    margin-left: 10px;
+.quick-links-list li,
+.follow-us-list li {
+    margin: 0;
 }
 
-
-
-.about-us-link {
+.quick-links-list a,
+.follow-us-list a {
     font-weight: bold;
-    font-size: medium;
+    font-size: small;
 }
 
-.copyright {
-    font-size: 0.8em;
-    color: #000000; 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px 0; /* Adjust padding for smaller screens */
+    }
 }

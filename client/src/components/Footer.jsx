@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEtsy, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
 
 const Footer = () => {
   useEffect(() => {
     const contactLink = document.getElementById("contact-link");
-    const email = atob('bGl2ZTJydW42MTVAZ21haWwuY29t'); // Base64 encoded email to prevent spam bots
+    const email = atob("bGl2ZTJydW42MTVAZ21haWwuY29t"); // Base64 encoded email to prevent spam bots
     contactLink.href = `mailto:${email}?Subject=Contact%20from%20Website`;
   }, []);
 
@@ -37,30 +38,77 @@ const Footer = () => {
                   className="quick-link contact-link"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Contact Us"
                 >
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     style={{
-                      fontSize: "1.2em",
+                      fontSize: "1em",
                       color: "Black",
+                      marginRight: "0.4em",
+                    }}
+                  />
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <Link to="/privacy">Privacy and Terms Policy</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col follow-us-section">
+            <h5>Follow Us:</h5>
+            <ul className="follow-us-list">
+              <li>
+                <a
+                  href="https://www.spotattheave.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Spot
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://catsmeowcandles.etsy.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faEtsy}
+                    style={{
+                      fontSize: "1em",
+                      color: "f2542d",
+                      marginRight: "0.4em",
+                      width: "1.2em",
+                      height: "1.0em",
+                      fontWeight: "bold",
+                    }}
+                  />
+                  Etsy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/catsmeowcandles/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    style={{
+                      fontSize: "1em",
+                      color: "red",
                       marginRight: "0.4em",
                       width: "1.2em",
                       height: "1.0em",
                     }}
                   />
-                  Contact Us:
+                  Instagram
                 </a>
               </li>
-              <li>
-                <Link to="/privacy">Privacy Policy</Link>
-              </li>
             </ul>
-          </div>
-
-          <div className="col">
-            <h5>Follow Us:</h5>
-            <p>Etsy Instagram  The Spot</p>
-            {/* Social icons here Etsy, The Spot, Instagram */}
           </div>
         </div>
         <div className="text-center py-3 copyright">
