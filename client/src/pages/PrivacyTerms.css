@@ -1,0 +1,22 @@
+/* PrivacyTerms.css */
+.privacy-terms {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .privacy-terms h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+  
+  .privacy-terms p {
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
