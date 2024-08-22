@@ -29,6 +29,37 @@
   color: #0a11c7; 
 }
 
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  background-color: red; /* Change the background color */
+  width: 50px; /* Adjust the width */
+  height: 50px; /* Adjust the height */
+  content: ''; /* Ensure the pseudo-element is displayed */
+}
+
+.carousel-caption h3 {
+  font-size: 1rem; 
+  color: black; 
+}
+
+.carousel-caption p {
+  font-size: 1rem; /* Adjust the font size */
+  color: black; /* Change the text color */
+}
+
+/* Style for carousel indicators */
+.carousel-indicators button {
+  background-color: rgb(234, 207, 234); /* Change the background color */
+  border: none; /* Remove border */
+  width: 12px; /* Adjust the width */
+  height: 12px; /* Adjust the height */
+  border-radius: 20%; /* Make them circular */
+  margin: 0 4px; /* Add some margin between indicators */
+}
+
+.carousel-indicators .active {
+  background-color: rgb(237, 225, 237); /* Change the background color for active indicator */
+}
   /* Responsive design for mobile */
 @media (max-width: 600px) {
   .about-section {
