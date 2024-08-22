@@ -58,8 +58,8 @@ const Home = () => {
             alt="Other Products"
           />
           <Carousel.Caption>
-            <h3>Other Products</h3>
-            <p>Explore our diverse range of candle products.</p>
+            <h3>Custom Candle Products</h3>
+            <p>Need a special gift? Explore our diverse range of custom candle products.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
