@@ -52,6 +52,19 @@
 .quick-links-list li,
 .follow-us-list li {
     margin: 0;
+    position: relative;
+}
+
+.quick-links-list li::after,
+.follow-us-list li::after {
+    content: "|";
+    margin: 0 10px; /* Adjust the margin as needed */
+    color: black; /* Adjust the color as needed */
+}
+
+.quick-links-list li:last-child::after,
+.follow-us-list li:last-child::after {
+    content: ""; /* Remove the bar after the last item */
 }
 
 .quick-links-list a,
@@ -59,6 +72,8 @@
     font-weight: bold;
     font-size: small;
 }
+
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
