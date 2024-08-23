@@ -2,64 +2,38 @@
 //ADD A FEATURED PRODUCT SECTION seasonal items?
 import "./Home.css";
 import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
   return (
     <div className="home-container">
-     <Carousel interval={3000}>
-     <Carousel.Item>
+
+      <Carousel interval={null}>
+        <Carousel.Item>
           <img
             className="d-block w-100"
-            src="path/to/waxmelts.jpg"
-            alt="Wax Melts"
+            src="/Containercandles.svg"
+            alt="First slide"
           />
           <Carousel.Caption>
-            <h3>Wax Melts</h3>
-            <p>Discover our wide range of aromatic, and creative, wax melts.</p>
+            <h3 className="carousel-caption-text">5oz., 8oz., and 16 oz. Jar Candles</h3>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            className="d-block w-100"
-            src="path/to/regular-candles.jpg"
-            alt="Regular Candles"
-          />
+        <Carousel.Item>
+          <img className="d-block w-100" src="/jars.png" alt="Second slide" />
           <Carousel.Caption>
-            <h3>Regular Candles</h3>
-            <p>Handcrafted candles for every occasion.</p>
+            <h3 className="carousel-caption-text">4oz., 5oz., 8oz., and 16 oz. Jar Candles</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="path/to/food-candles.jpg"
-            alt="Food Candles"
+            src="path/to/your/image3.jpg"
+            alt="Third slide"
           />
           <Carousel.Caption>
-            <h3>Food Candles</h3>
-            <p>Unique food-themed candles that look good enough to eat.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="path/to/tealights.jpg"
-            alt="Tealights"
-          />
-          <Carousel.Caption>
-            <h3>Tealights</h3>
-            <p>Perfect for creating a cozy atmosphere.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="path/to/other.jpg"
-            alt="Other Products"
-          />
-          <Carousel.Caption>
-            <h3>Custom Candle Products</h3>
-            <p>Need a special gift? Explore our diverse range of custom candle products.</p>
+            <h3 className="carousel-caption-text"></h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -111,5 +85,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;

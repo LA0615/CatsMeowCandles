@@ -1,20 +1,19 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import "./Header.css";
-
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   useEffect(() => {
     const contactLink = document.getElementById("header-contact-link");
-    const email = atob('bGl2ZTJydW42MTVAZ21haWwuY29t'); // Base64 encoded email to prevent spam bots
+    const email = atob("bGl2ZTJydW42MTVAZ21haWwuY29t"); // Base64 encoded email to prevent spam bots
     contactLink.href = `mailto:${email}?Subject=Contact%20from%20Website`;
   }, []);
 
   return (
-    <header className="container-fluid">
-      <div className="d-flex flex-column align-items-center vh-100 justify-content-center">
+    <header className="header-container">
+      <div className="container-fluid">
         <div className="brand-container text-center">
           <h1 className="text-center">Cat&apos;s Meow Candles</h1>
           <video src="logo.mp4" className="logo" autoPlay loop muted />
@@ -28,12 +27,11 @@ const Header = () => {
               Shop
             </Link>
             <a
-            id="header-contact-link"
-            className="nav-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Contact"
-
+              id="header-contact-link"
+              className="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contact"
             >
               Contact
             </a>
@@ -61,5 +59,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
