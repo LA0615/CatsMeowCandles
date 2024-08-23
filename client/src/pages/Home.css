@@ -116,7 +116,7 @@
   .carousel-caption-text {
     font-size: 1.4rem; /* Adjust font size for large devices */
     padding: 8px; /* Adjust padding for large devices */
-    background: rgba(249, 236, 236, 0.1); /* Ensure consistent background for extra large devices */
+    background: rgba(249, 246, 246, 0.1); /* Ensure consistent background for extra large devices */
 
   }
 }
