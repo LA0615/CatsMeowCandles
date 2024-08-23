@@ -1,76 +1,132 @@
+/* Apply to the home-container class */
 .home-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .about-section {
-    background-color:#F0F0DA;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 2px solid black;
-  }
-  
-  .about-section h2 {
-    color: #0a11c7;
-    margin-bottom: 10px;
-  }
-  
-  .about-section p {
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    font-weight: bolder ;
-  }
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  /* Style for links within the about-section */
+.about-section {
+  width: 100%;
+  background-color: #F0F0DA;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+}
+
+.about-section h2 {
+  color: #0a11c7;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
 .about-section a {
   font-weight: bold;
-  color: #0a11c7; 
+  color: #0a11c7;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 60px; /* Increase width for bold effect */
+  height: 60px; /* Increase height for bold effect */
+  background-color: black;
+  transform: translateY(-50%); /* Center the arrows vertically */
 }
 
 .carousel-control-prev-icon::before,
 .carousel-control-next-icon::before {
-  background-color: red; /* Change the background color */
-  width: 50px; /* Adjust the width */
-  height: 50px; /* Adjust the height */
-  content: ''; /* Ensure the pseudo-element is displayed */
+  font-size: 2em; /* Increase font size for bold effect */
+  color: black; /* Ensure the arrow color is black */
 }
 
-.carousel-caption h3 {
-  font-size: 1rem; 
-  color: black; 
+.carousel-caption-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
 }
 
-.carousel-caption p {
-  font-size: 1rem; /* Adjust the font size */
-  color: black; /* Change the text color */
-}
-
-/* Style for carousel indicators */
-.carousel-indicators button {
-  background-color: rgb(234, 207, 234); /* Change the background color */
-  border: none; /* Remove border */
-  width: 12px; /* Adjust the width */
-  height: 12px; /* Adjust the height */
-  border-radius: 20%; /* Make them circular */
-  margin: 0 4px; /* Add some margin between indicators */
-}
-
-.carousel-indicators .active {
-  background-color: rgb(237, 225, 237); /* Change the background color for active indicator */
-}
-  /* Responsive design for mobile */
+/* Responsive design for mobile */
 @media (max-width: 600px) {
   .about-section {
-      padding: 10px; /* Further reduced padding for mobile */
+    padding: 10px;
+    /* Further reduced padding for mobile */
   }
 
   .about-section h2 {
-      font-size: 1.5em; /* Adjust font size for mobile */
+    font-size: 1.5em;
+    /* Adjust font size for mobile */
   }
 
   .about-section p {
-      font-size: 1em; /* Adjust font size for mobile */
+    font-size: 1em;
+    /* Adjust font size for mobile */
+  }
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .carousel-caption-text {
+    font-size: 1.2rem; /* Adjust font size for tablets */
+    padding: 15px; /* Adjust padding for tablets */
+    background: rgba(249, 246, 246, 0.1); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); /* Adjust text shadow for mobile phones */
+
+  }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 576px) {
+  .carousel-caption-text {
+    font-size: 1rem; /* Adjust font size for mobile phones */
+    padding: 4px; /* Adjust padding for mobile phones */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); /* Adjust text shadow for mobile phones */
+    background: rgba(0, 0, 0, 0.0); /* Adjust background for mobile phones */
+    border-radius: 4px; /* Adjust border radius for mobile phones */
+  }
+}
+
+/* Responsive design for medium devices (desktops) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .carousel-caption-text {
+    font-size: 1.4rem; /* Adjust font size for medium devices */
+    padding: 10x; /* Adjust padding for tablets */
+    background: rgba(249, 246, 246, 0.1); 
+  }
+}
+
+/* Responsive design for large devices (large desktops) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .carousel-caption-text {
+    font-size: 1.4rem; /* Adjust font size for large devices */
+    padding: 8px; /* Adjust padding for large devices */
+    background: rgba(249, 236, 236, 0.1); /* Ensure consistent background for extra large devices */
+
+  }
+}
+
+/* Responsive design for extra large devices (extra large desktops) */
+@media (min-width: 1200px) {
+  .carousel-caption-text {
+    font-size: 1.6rem; /* Adjust font size for extra large devices */
+    padding: 4px; /* Adjust padding for extra large devices */
+    background: rgba(0, 0, 0, 0.1); /* Ensure consistent background for extra large devices */
+
   }
 }

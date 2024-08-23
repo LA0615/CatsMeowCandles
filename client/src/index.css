@@ -12,9 +12,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 /* index.css */
-
-
 
 a {
   font-weight: 500;
@@ -25,8 +24,6 @@ a {
 a:hover {
   color: #535bf2;
 }
-
-
 
 h1 {
   font-size: 3.2em;
@@ -74,6 +71,7 @@ button:focus-visible {
 body,
 html {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   display: flex;
@@ -86,15 +84,16 @@ html {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  flex: 1;
   background-color: rgb(240, 239, 239);
-
+  margin: 0 auto; /* Center the container */
+  padding: 10px; /* Adjust padding to reduce space on top and sides */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .main-content {
   flex: 1;
-  padding-bottom: 40px;
-  margin: 0;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -105,8 +104,8 @@ footer {
   width: 100%;
   /* Ensure header and footer take full width */
   box-sizing: border-box;
-
-
+  max-width: 1200px; /* Set a maximum width */
+  margin: 0 auto; /* Center the header and footer */
 }
 
 .text-center {
@@ -116,8 +115,6 @@ footer {
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
 }
 
-
-
 .copyright {
   font-size: 0.8em;
   color: black;
@@ -126,8 +123,8 @@ footer {
 .container-fluid {
   position: relative;
   /* Ensure the pseudo-element is positioned correctly */
-  padding: 10px;
-  border-bottom: 2px solid black;
+  padding: 5px;
+  border: 2px solid black;
   background-image: url('/header.png');
   background-size: cover;
   /* Ensure the image covers the entire container */
@@ -135,6 +132,8 @@ footer {
   /* Center the background image */
   background-repeat: no-repeat;
   /* Prevent the image from repeating */
+  width: 100%; /* Set width to 100% */
+
 }
 
 .container-fluid::before {
@@ -152,16 +151,16 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 @media (max-width: 768px) {
   .app-container {
-    padding: 10px
+    padding: 10px;
   }
 }
-  @media(min-width: 769px) {
-    .app-container {
-      padding: 20px;
-    }
+
+@media (min-width: 769px) {
+  .app-container {
+    padding: 20px;
   }
+}

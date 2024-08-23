@@ -1,19 +1,20 @@
-header {
+/* Header.css */
+
+.header-container {
   width: 100%;
   box-sizing: border-box;
-  background-color: #ffffff; /* Or your desired background color */
-  border-bottom: 1px solid #ddd; /* Optional border */
-  padding: 0 20px;
+  background-color: #ffffff; 
+  border-bottom: 1px solid #ddd; 
+  padding: 0;
 }
 
-.container-fluid {
+.header-container .container-fluid {
   width: 100%;
-  padding: 0 15px; /* Adjust padding as needed */
+  padding: 20px; 
   margin: 0 auto;
 }
 
-
- .brand-container {
+.header-container .brand-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,10 +25,7 @@ header {
   z-index: 1; /* Ensure content is above the overlay */
 }
 
-
-
-
-.logo {
+.header-container .logo {
   width: 280px; 
   height: 280px; 
   margin: 0 0 30px 0;
@@ -35,25 +33,20 @@ header {
   background-color: transparent;
   border: 4px solid black;
 }
-.nav-container {
+
+.header-container .nav-container {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 20px; /* Adjust as needed */
 }
 
-
-
-
-
-.nav-group {
+.header-container .nav-group {
   display: flex;
   gap: 10px;
 }
 
-
-
-.nav-link {
+.header-container .nav-link {
   position: relative;
   padding: 0 10px;
   font-weight: bolder;
@@ -63,7 +56,7 @@ header {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
-.nav-group .nav-link:not(:last-child)::after {
+.header-container .nav-group .nav-link:not(:last-child)::after {
   content: "|";
   position: absolute;
   right: -5px;
@@ -72,12 +65,12 @@ header {
 
 /* Media query for mobile view */
 @media (max-width: 768px) {
-  .logo {
+  .header-container .logo {
     width: 160px; /* Smaller size for mobile view */
     height: 160px; /* Smaller size for mobile view */
   }
 
-  .nav-container {
+  .header-container .nav-container {
     flex-direction: column; /* Stack nav links vertically */
     align-items: center; /* Center the nav links */
     justify-content: flex-end; /* Align nav links towards the bottom */
@@ -85,7 +78,7 @@ header {
     margin-top: 20px; /* Add space above the nav links */
   }
 
-  .nav-group {
+  .header-container .nav-group {
     display: flex;
     flex-direction: column; /* Stack nav links vertically */
     align-items: center; /* Center the nav links */
@@ -93,7 +86,7 @@ header {
     gap: 2px; /* Further reduce gap between links */
   }
 
-  .nav-link {
+  .header-container .nav-link {
     text-align: center;
     margin: 2px 0; /* Further reduce margin between rows */
   }
@@ -101,13 +94,13 @@ header {
 
 /* Media query for iPad view */
 @media (max-width: 1024px) {
-  .logo {
+  .header-container .logo {
     width: 220px; /* Adjust size for iPad view */
     height: 220px; /* Adjust size for iPad view */
     margin: 0 0 28px 0; /* Adjust the top margin to move the logo up */
   }
 
-  .nav-container {
+  .header-container .nav-container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; /* Space out the nav links */
