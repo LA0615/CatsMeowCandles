@@ -2,31 +2,32 @@
 
 .footer {
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
     z-index: 1000;
-    border-top: 3px dashed lightgray;
+    border-top: 3px dashed black;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
-    min-height: 200px; /* Ensure footer has enough height to center content */
+    justify-content: center;
+    background-color: inherit; 
+    margin-top: 60px; /* Add margin to separate footer from content */
 }
 
 .footer h5 {
     font-weight: bolder;
-    font-size: medium;
-    margin: 0 0 10px 0;
+    margin: 2px  0;
     text-decoration: underline;
     text-decoration-thickness: 2px;
+    font-size: 0.8em;
 }
 
 .footer p {
     max-width: 600px;
     word-wrap: break-word;
     text-align: center;
-    margin: 0 auto 20px auto; /* Center the paragraph within its container and add bottom margin */
+    margin: 0 auto 10px auto; /* Center the paragraph within its container and add bottom margin */
     font-style: italic;
     color: black;
     font-size: 1em;
@@ -35,7 +36,7 @@
 
 .quick-links-section,
 .follow-us-section {
-    margin: 20px 0; /* Added margin to separate sections */
+    margin: 5px 0; /* Added margin to separate sections */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -49,7 +50,7 @@
     margin: 0;
     display: flex;
     justify-content: center; /* Center content horizontally */
-    gap: 10px; /* Increased gap for better spacing */
+    gap: 3px; /* Increased gap for better spacing */
 }
 
 .quick-links-list li,
@@ -79,6 +80,6 @@
 /* Responsive styles */
 @media (max-width: 768px) {
     .footer {
-        padding: 15px 0; /* Adjust padding for smaller screens */
+        padding: 10px 0; /* Adjust padding for smaller screens */
     }
 }
