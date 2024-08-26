@@ -1,14 +1,14 @@
-//TO DO:
-//ADD A FEATURED PRODUCT SECTION seasonal items?
 import "./Home.css";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 
 const Home = () => {
   return (
     <div className="home-container">
 
-      <Carousel interval={null}>
+      <Carousel fade>
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -16,24 +16,53 @@ const Home = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3 className="carousel-caption-text">5oz., 8oz., and 16 oz. Jar Candles</h3>
+            <h3 className="carousel-caption-text">Discover our hand-poured 5oz., 8oz., and 16oz. jar candles—crafted with care to fill your space with warmth and inviting aromas</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src="/jars.png" alt="Second slide" />
           <Carousel.Caption>
-            <h3 className="carousel-caption-text">4oz., 5oz., 8oz., and 16 oz. Jar Candles</h3>
+            <h3 className="carousel-caption-text">Experience the charm of our hand-poured 4oz., 5oz., 8oz., and 16oz. jar candles—perfect for adding a warm, inviting glow to any room</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="path/to/your/image3.jpg"
+            src="/wax.png"
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3 className="carousel-caption-text"></h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h3 className="carousel-caption-text">Discover the perfect blend of creativity and scent with our wax melts, crafted to enhance every moment.</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/waxmelts.png"
+            alt="Fourth slide"
+          />
+          <Carousel.Caption>
+            <h3 className="carousel-caption-text">Indulge in the rich aromas of our hand-poured wax melts, designed to fill your space with lasting fragrance and warmth.</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/dessert.png"
+            alt="Fifth slide"
+          />
+          <Carousel.Caption>
+            <h3 className="carousel-caption-text">Treat yourself to our hand-poured dessert and food candles, crafted to look as delightful as they smell. Perfect for adding a sweet touch to any space!</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/custom.png"
+            alt="Fifth slide"
+          />
+          <Carousel.Caption>
+            <h3 className="carousel-caption-text">Craft your unique vibe with our hand-poured custom candles, designed just for you.</h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -82,6 +111,52 @@ const Home = () => {
           and check out our products in person.
         </p>
       </section>
+
+      <section className="featured-products" style={{ borderTop: '2px dashed black', paddingTop: '20px', marginTop: '60px' }}>
+      <h2 style={{ textAlign: 'center', padding: '10px', fontWeight:'bold', color: 'blue', fontStyle: 'italic'}}>Featured Products</h2>
+      <CardGroup>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This card has supporting text below as a natural lead-in to
+            additional content.{' '}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+    </CardGroup>
+    </section>
     </div>
   );
 };
