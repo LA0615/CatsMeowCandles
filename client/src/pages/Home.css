@@ -159,7 +159,7 @@ margin-bottom: 0;
 /* Responsive design for large devices (large desktops) */
 @media (min-width: 993px) and (max-width: 1200px) {
   .carousel-item img {
-    height: 275px; 
+    height: 270px; 
   }
 }
 
@@ -175,6 +175,6 @@ margin-bottom: 0;
 /* Responsive design for extra large devices (extra large desktops) */
 @media (min-width: 1201px) {
   .carousel-item img {
-    height: 300px; 
+    height: 275px; 
   }
 }
