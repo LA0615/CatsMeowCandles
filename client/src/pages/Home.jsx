@@ -12,7 +12,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/Containercandles.svg"
+            src="/Containercandles.png"
             alt="First slide"
           />
           <Carousel.Caption>

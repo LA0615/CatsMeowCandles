@@ -165,12 +165,15 @@ footer {
 .navbar-nav .nav-link {
   font-weight: bold;
   color: white;
-  margin: 0 10px;
-  padding: 3px;
+  margin: 0 8px;
+  padding: 2px;
   /* Increase clickable area */
   text-decoration: none;
   /* Remove underline */
   font-size: 1em;
+  position: relative;
+
+
 }
 
 .navbar-nav .nav-link:not(:last-child)::after {
@@ -178,13 +181,16 @@ footer {
   font-size: 1.1em;
   position: absolute;
   color: black;
-  margin-left: 10px;
+  margin-left: 8px;
+  display: inline-block;
+  vertical-align: middle;
+
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover .fa-icon {
   background-color: rgba(255, 255, 255, 0.2);
   color: #535bf2;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .img-fluid {
@@ -252,6 +258,8 @@ footer {
     padding-bottom: 2px;
   }
 
+
+
   .navbar-nav .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: #535bf2;
@@ -272,7 +280,7 @@ footer {
   .navbar-nav .nav-link {
     margin: 0 10px;
     /* Adjust margin for tablet screens */
-    padding: 5x 15px;
+    padding: 2x 10px;
     /* Ensure consistent padding */
     margin-top: -10px;
   }

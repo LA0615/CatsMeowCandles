@@ -3,10 +3,9 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import Home from "./pages/Home.jsx";
-// import Shop from "./pages/Shop.jsx";
-import Login from "./pages/Login.jsx";
+ //import Shop from "./pages/Shop.jsx";
+import User from "./pages/User.jsx";
 import Cart from "./pages/Cart.jsx";
-import SignUp from "./pages/Signup.jsx";
 import CandleCare from "./pages/CandleCare.jsx"; 
 import PrivacyTerms from "./pages/PrivacyTerms.jsx";
 
@@ -16,9 +15,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Home /> },
-      // { path: "shop", element: <Shop /> },
-      { path: "login", element: <Login /> },
-      { path: "signup", element: <SignUp /> },
+       //{ path: "shop", element: <Shop /> },
+      { path: "user", element: <User /> },
       { path: "cart", element: <Cart /> },
       { path: "Care", element: <CandleCare /> }, 
       { path: "privacy", element: <PrivacyTerms /> },

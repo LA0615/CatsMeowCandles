@@ -1,53 +1,53 @@
-// import {Routes, Route} from "react-router-dom";
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
-// import Home from "./pages/Home";
-// //import Shop from "./pages/Shop";
-// import Cart from "./pages/Cart";
-// import Login from "./pages/Login";
-// import SignUp from "./pages/Signup";
-// import CandleCare from "./pages/CandleCare";
-// import PrivacyTerms from "./pages/PrivacyTerms";
-
-// function App() {
-//   return (
-//       <div className="app-container">
-
-//       <Header />
-//       <main className="main-content">
-
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         {/*<Route path="/shop" element={<Shop />} />*/}
-//         <Route path="/cart" element={<Cart />} />
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/signup" element={<SignUp />} />
-//         <Route path="/candleCare" element={<CandleCare />} />
-//         <Route path="/privacyTerms" element={<PrivacyTerms />} />
-//       </Routes>
-//       </main>
-//       <Footer />
-//     </div>
-//   );
-// }
-
-// export default App;
 
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import{
+ ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from "@apollo/client";
+
+import { setContext } from "@apollo/client/link/context";
+
+const httpLink = createHttpLink({
+  uri: "http://localhost:4000/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <div className="app-container">
-      <Header />
-      <main className="main-content">
-        <Outlet /> {/* This will render the matched route components */}
-      </main>
-      <Footer />
-    </div>
+    <ApolloProvider client={client}>
+      <div className="app-container">
+        <Header />
+        <main className="main-content">
+          <Outlet /> {/* This will render the matched route components */}
+        </main>
+        <Footer />
+      </div>
+    </ApolloProvider>
   );
 }
 
 export default App;
+
+
+
+
+
 
