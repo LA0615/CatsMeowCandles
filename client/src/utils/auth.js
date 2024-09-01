@@ -1,4 +1,6 @@
-import * as jwtDecode from 'jwt-decode';
+
+
+import {jwtDecode} from 'jwt-decode';
 
 // Set token in local storage
 export const setToken = (token) => {
@@ -20,6 +22,9 @@ export const isAuth = () => {
   try {
     const decodedToken = jwtDecode(token);
     const currentTime = Date.now() / 1000; // Current time in seconds
+
+    // Check if token is expired
+
     if (decodedToken.exp < currentTime) {
       removeToken(); // Token is expired, remove it
       return false;
@@ -31,3 +36,4 @@ export const isAuth = () => {
     return false;
   }
 };
+
