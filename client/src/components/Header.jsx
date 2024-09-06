@@ -282,7 +282,7 @@ const Header = () => {
 
   useEffect(() => {
     const contactLink = document.getElementById("header-contact-link");
-    const email = atob("bGl2ZTJydW42MTVAZ21haWwuY29t"); // Base64 encoded email to prevent spam bots
+    const email = atob("Y2F0c21lb3djYW5kbGVzQGdtYWlsLmNvbQ=="); // Base64 encoded email to prevent spam bots
     contactLink.href = `mailto:${email}?Subject=Contact%20from%20Website`;
   }, []);
 

@@ -5,7 +5,7 @@ const PrivacyTerms = () => {
   useEffect(() => {
     const contactLink1 = document.getElementById("contact-link1");
     const contactLink2 = document.getElementById("contact-link2");
-    const email = atob("bGl2ZTJydW42MTVAZ21haWwuY29t"); // Base64 encoded email to prevent spam bots
+    const email = atob("Y2F0c21lb3djYW5kbGVzQGdtYWlsLmNvbQ=="); // Base64 encoded email to prevent spam bots
     if (contactLink1) {
       contactLink1.setAttribute('href', `mailto:${email}?Subject=Contact%20from%20Website`);
     }

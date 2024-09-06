@@ -1,0 +1,26 @@
+.main-content h1 {
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.accordion .accordion-button {
+    font-weight: bold !important;
+    font-style: italic;
+}
+
+.effective-date {
+    margin-bottom: 20px;
+    color: #007bff;
+    font-style: normal;
+}
+
+.thank-you-message {
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-indent: 20px;
+    color:black;
+    font-weight: bold;
+    text-align: justify;
+}

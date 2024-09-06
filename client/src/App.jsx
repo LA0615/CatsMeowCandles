@@ -8,12 +8,11 @@ import { setContext } from "@apollo/client/link/context";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
-// Uncomment this if using AuthContext
  import { AuthProvider } from './utils/AuthContext';
 
 // Set up the Apollo Client
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000/graphql", // Adjust the URI to your server's URL
+  uri: "http://localhost:4000/graphql", 
 });
 
 const authLink = setContext((_, { headers }) => {
