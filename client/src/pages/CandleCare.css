@@ -1,0 +1,16 @@
+.tips {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-style: italic  ;
+    color:dodgerblue;
+  }
+
+  .candle-care-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-style: italic;
+  }
+  
+  .candle-care-list li {
+    margin-bottom: 5px;
+  }

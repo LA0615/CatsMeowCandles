@@ -1,5 +1,4 @@
 //TO DO:
-//CANDLE CARE CARD  maybe use card with links to download pdf of candle care tips either left or under return policy
 //ADD FAVORITES LIST maybe at the bottom of page not too sure yet
 //ADD MY ORDERS AND PAST ORDERS maybe use accordion to show past orders and present orders middle or top of page
 
@@ -9,6 +8,7 @@ import { AuthContext } from "../utils/AuthContext";
 import Accordion from "react-bootstrap/Accordion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./User.css";
+import CandleCare from "./CandleCare";
 
 const User = () => {
   const navigate = useNavigate();
@@ -41,32 +41,32 @@ const User = () => {
                 Due to the fact that all of our candles are handmade and customized, we only
                 accept returns or exchanges under the following circumstances:
               </p>
-              <ol>
-                <li>
-                  <p>
+              <ol className="black-bold-numbers">
+              <li>
+              <p className="red-bold-item">
                     Returns: We do not accept returns unless the item arrives
                     damaged.
                   </p>
                 </li>
                 <li>
-                  <p>
+                <p className="red-bold-item">
                     Exchanges: We only accept exchanges if your item is damaged
                     during shipping. To be eligible for an exchange:
                   </p>
                   <ul>
                     <li>
-                      <p>
+                      <p className="info-item">
                         You must contact us within 7 days of receiving the item.
                       </p>
                     </li>
                     <li>
-                      <p>
+                    <p className="info-item">
                         You must provide proof of damage (e.g., photos of the
                         item and packaging).
                       </p>
                     </li>
                     <li>
-                      <p>
+                    <p className="info-item">
                         Once your exchange request is approved, we will send you
                         instructions on how to return the damaged item and
                         arrange a replacement.
@@ -75,10 +75,10 @@ const User = () => {
                   </ul>
                 </li>
                 <li>
-                  <p>Damaged or Defective Items:</p>
+                <p className="red-bold-item">Damaged or Defective Items:</p>
                   <ul>
                     <li>
-                      <p>
+                    <p className="info-item">
                         If your order arrives damaged, please contact us at{" "}
                         <span id="email"></span> within 7 days of delivery. Be
                         sure to include your order number and photos of the
@@ -86,7 +86,7 @@ const User = () => {
                       </p>
                     </li>
                     <li>
-                      <p>
+                    <p className="info-item">
                         We will replace the damaged item at no additional cost
                         to you or offer an exchange.
                       </p>
@@ -94,10 +94,11 @@ const User = () => {
                   </ul>
                 </li>
               </ol>
-              <p>Contact Information:</p>
+              <p className="red-bold-item" >Contact:
+              </p>
               <ul>
                 <li>
-                  <p>
+                <p className="info-item">
                     If you have any questions about our policy, please contact
                     us:
                   </p>
@@ -110,20 +111,7 @@ const User = () => {
               </ul>
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
-              How to Care for Your Candles and Wax Melts
-            </Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion.Body>
-          </Accordion.Item>
+          <CandleCare />
         </Accordion>
       </div>
     </main>
