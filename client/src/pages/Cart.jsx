@@ -1,4 +1,5 @@
 //TO DO:
+//Add Return Policy
 //Add payment form
 //Add cart items from shop page
 //Add billing info form

@@ -1,45 +1,101 @@
-.main-content h1 {
-    text-align: center;
-    margin-top: 25px;
-    font-style: italic;
-    font-family: cursive;
+.user-page {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
 }
 
-.accordion .accordion-button {
-    font-weight: bold !important;
-    font-style: italic;
-    background-color: #c5e2ef;
+
+
+.sidebar {
+    width: 0;
+    background-color: lightgray;
+    padding: 15px;
+    position: relative;
+    top: 60px;
+    left: 0;
+    height: calc(100vh - 60px); /* Adjust height to account for header */
+
+    overflow-y: auto;
     border: 2px solid black;
-    font-size: 20px;
+    transition: width 0.3s ease;
+    visibility: hidden;
 }
 
-.effective-date {
-    margin-bottom: 20px;
+.sidebar.active {
+    width: 182px;
+    visibility: visible;
+}
+
+.sidebar a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.sidebar a.active {
     color: #007bff;
-    font-style: normal;
 }
 
-.thank-you-message {
-    font-style: italic;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-indent: 20px;
-    color:black;
-    font-weight: bold;
-    text-align: justify;
-    border-bottom: dashed 2px black;
+.sidebar a:hover {
+    color: #0056b3;
 }
 
-.red-bold-item {
-    color: red;
-    font-weight: bold;
+.content {
+    margin-left: 0;
+    /* Adjust this value to match the sidebar width */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    position: relative;
+    top: 20px;
+    flex-grow: 1;
 }
 
-.black-bold-numbers li::marker {
-    font-weight: bold;
-    color: black;
+.content.active {
+    margin-left: 182px;
+    /* Adjust this value if you want a different margin when sidebar is active */
 }
 
-.info-item{
-    font-weight: bold;
-    color: black;
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .user-page {
+        flex-direction: column;
+        /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%;
+        /* Full width for sidebar */
+        height: auto;
+        /* Auto height for sidebar */
+        position: relative;
+        /* Relative positioning */
+        top: 0;
+        /* Reset top position */
+        left: 0;
+        /* Reset left position */
+        bottom: auto;
+        /* Reset bottom position */
+
+    }
+
+    .sidebar.active {
+        width: 100%;
+        /* Full width for active sidebar */
+    }
+
+    .content {
+        margin-left: 0;
+        /* Reset margin for content */
+        top: 0;
+        /* Reset top position */
+    }
+
+    .content.active {
+        margin-left: 0;
+        /* Reset margin for active content */
+    }
+
+
 }
