@@ -1,0 +1,45 @@
+.return-policy {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 2px solid rgb(242, 226, 207);
+    border-radius: 5px;
+    width: 100%;
+}
+.return-policy h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-style: italic;
+
+}
+.return-policy .effective-date {
+    margin-bottom: 20px;
+    color: #007bff;
+    font-style: normal;
+}
+
+.return-policy .thank-you-message {
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-indent: 20px;
+    color: black;
+    font-weight: bold;
+    text-align: justify;
+    border-bottom: dashed 2px black;
+}
+
+.return-policy .red-bold-item {
+    color: red;
+    font-weight: bold;
+}
+
+.return-policy .black-bold-numbers li::marker {
+    font-weight: bold;
+    color: black;
+}
+
+.return-policy .info-item {
+    font-weight: bold;
+    color: black;
+}
