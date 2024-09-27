@@ -37,3 +37,17 @@ export const isAuth = () => {
   }
 };
 
+// Get the authenticated user's name
+export const getUserName = () => {
+  const token = localStorage.getItem('token');
+  if (!token) {
+    return null;
+  }
+
+  try {
+    const decoded = jwtDecode(token);
+    return `${decoded.firstName} ${decoded.lastName}`;
+  } catch (error) {
+    return null;
+  }
+};

@@ -12,6 +12,8 @@ const Header = () => {
   const [show, setShow] = useState(false);
   const [isSignup, setIsSignup] = useState(false);
   const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -25,6 +27,8 @@ const Header = () => {
   const handleClose = () => {
     setShow(false);
     setEmail("");
+    setFirstName("");
+    setLastName("");
     setPassword("");
     setEmailError("");
     setPasswordError("");
@@ -65,8 +69,17 @@ const Header = () => {
 
   const handleSignup = async () => {
     setLoading(true);
+
     try {
-      const { data } = await signup({ variables: { email, password } });
+      const { data } = await signup({
+        variables: {
+          email,
+          firstName,
+          lastName,
+          password,
+        },
+      });
+
       if (data.signup.token) {
         login(data.signup.token);
         navigate("/user");
@@ -76,7 +89,11 @@ const Header = () => {
       }
     } catch (error) {
       console.error("Signup error:", error);
-      setPasswordError("Signup failed");
+      if (error.graphQLErrors && error.graphQLErrors.length > 0) {
+        setPasswordError(error.graphQLErrors[0].message);
+      } else {
+        setPasswordError("An unexpected error occurred. Please try again.");
+      }
     } finally {
       setLoading(false);
     }
@@ -198,6 +215,31 @@ const Header = () => {
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
+            {isSignup && (
+              <>
+                <Form.Group controlId="formFirstName">
+                  <Form.Label>First Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter First Name"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    required
+                  />
+                </Form.Group>
+                <Form.Group controlId="formLastName">
+                  <Form.Label>Last Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter last name"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    required
+                  />
+                </Form.Group>
+              </>
+            )}
+
             <Form.Group controlId="formEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control
@@ -252,6 +294,9 @@ const Header = () => {
               )}
             </Button>
           </Form>
+          {passwordError && (
+            <div className="mt-3 text-danger">{passwordError}</div>
+          )}
           <div className="mt-3">
             {isSignup ? (
               <p>
