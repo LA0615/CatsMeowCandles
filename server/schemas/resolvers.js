@@ -1,37 +1,32 @@
+import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import bcrypt from 'bcryptjs';
-import { User } from '../models/User.js'; 
+import { User } from '../models/User.js';  
 
-export const resolvers = {
+const resolvers = {
   Mutation: {
-    signup: async (_, { email, password }) => {
-      const hashedPassword = await bcrypt.hash(password, 10);
-      const user = new User({ email, password: hashedPassword });
-      await user.save();
+    signup: async (_, { email, firstName, lastName, password }) => {
+      try {
+        // Hash the password
+        const hashedPassword = await bcrypt.hash(password, 10);
 
-      const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
-        expiresIn: '1h',
-      });
+        // Create a new user
+        const user = new User({ email, firstName, lastName, password: hashedPassword });
+        await user.save();
 
-      return { token, user };
-    },
-    login: async (_, { email, password }) => {
-      const user = await User.findOne({ email });
-      if (!user) {
-        throw new Error('No user found with this email');
+        // Generate a JWT token
+        const token = jwt.sign(
+          { userId: user._id, firstName: user.firstName, lastName: user.lastName },
+          process.env.JWT_SECRET,
+          { expiresIn: '1h' }
+        );
+
+        return { token, user };
+      } catch (error) {
+        console.error('Signup error:', error);
+        throw new Error('Error during signup');
       }
-
-      const valid = await bcrypt.compare(password, user.password);
-      if (!valid) {
-        throw new Error('Incorrect password');
-      }
-
-      const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
-        expiresIn: '1h',
-      });
-
-      return { token, user };
     },
   },
 };
 
+export { resolvers };
