@@ -19,7 +19,7 @@ const Header = () => {
   const [passwordError, setPasswordError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const { login, logout, user } = useContext(AuthContext);
+  const { login, logout, user } = useContext(AuthContext); 
 
   const [signup] = useMutation(SIGNUP_USER);
   const [loginMutation] = useMutation(LOGIN_USER);
@@ -52,7 +52,7 @@ const Header = () => {
     setLoading(true);
     try {
       const { data } = await loginMutation({ variables: { email, password } });
-      if (data.login.token) {
+      if (data && data.login && data.login.token) {
         login(data.login.token);
         navigate("/user");
         handleClose();
@@ -88,7 +88,6 @@ const Header = () => {
         setPasswordError("Signup failed");
       }
     } catch (error) {
-      console.error("Signup error:", error);
       if (error.graphQLErrors && error.graphQLErrors.length > 0) {
         setPasswordError(error.graphQLErrors[0].message);
       } else {
