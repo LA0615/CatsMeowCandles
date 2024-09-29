@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import { setToken, removeToken, isAuth } from "../utils/auth";
-import  {jwtDecode}  from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import PropTypes from "prop-types";
 
 export const AuthContext = createContext();
@@ -15,7 +15,11 @@ export const AuthProvider = ({ children }) => {
       setAuthToken(token);
       try {
         const decodedUser = jwtDecode(token);
-        setUser(decodedUser);
+        setUser({
+          userId: decodedUser.userId,
+          firstName: decodedUser.firstName,
+          lastName: decodedUser.lastName,
+        });
       } catch (error) {
         console.error("Error decoding token:", error);
         removeToken();
@@ -30,7 +34,12 @@ export const AuthProvider = ({ children }) => {
     setAuthToken(token);
     try {
       const decodedUser = jwtDecode(token);
-      setUser(decodedUser);
+      setUser({
+        userId: decodedUser.userId,
+        firstName: decodedUser.firstName,
+        lastName: decodedUser.lastName,
+      });
+
     } catch (error) {
       console.error("Error decoding token:", error);
       removeToken();
@@ -56,3 +65,5 @@ export const AuthProvider = ({ children }) => {
 AuthProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
+
