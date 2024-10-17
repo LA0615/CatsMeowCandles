@@ -6,8 +6,8 @@ import "./index.css";
 import Home from "./pages/Home.jsx";
  import Shop from "./pages/Shop.jsx";
 import User from "./pages/User.jsx";
-// import ForgotPassword from './components/ForgotPassword.jsx';
-// import ResetPassword from './components/ResetPassword.jsx';
+import ForgotPassword from './components/ForgotPassword.jsx';
+ import ResetPassword from './components/ResetPassword.jsx';
 import Cart from "./pages/Cart.jsx";
 import CandleCare from "./pages/CandleCare.jsx"; 
 import PrivacyTerms from "./pages/PrivacyTerms.jsx";
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
        { path: "shop", element: <Shop /> },
-      //  {path: "forgot-password", element: <ForgotPassword /> },
-      //  {path: "reset-password/:token", element: <ResetPassword /> },
+        {path: "forgot-password", element: <ForgotPassword /> },
+       {path: "reset-password/:token", element: <ResetPassword /> },
        { path: "user/*", element: <User />, children: [
         { path: "favorites", element: <Favorites /> },
         { path: "current-orders", element: <CurrentOrders /> },

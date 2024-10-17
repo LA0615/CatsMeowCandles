@@ -1,7 +1,6 @@
 .user-page {
     display: flex;
-    flex-direction: row;
-    min-height: 100vh;
+   
 }
 
 
@@ -42,16 +41,23 @@
     color: #0056b3;
 }
 
-.content {
-    margin-left: 0;
-    /* Adjust this value to match the sidebar width */
-    padding: 20px;
-    transition: margin-left 0.3s ease;
-    position: relative;
-    top: 20px;
-    flex-grow: 1;
-}
 
+
+.content {
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+
+.content h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
 .content.active {
     margin-left: 182px;
     /* Adjust this value if you want a different margin when sidebar is active */
