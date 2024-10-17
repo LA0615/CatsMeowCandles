@@ -1,4 +1,4 @@
-import { gql } from 'graphql-tag';
+import { gql } from "graphql-tag";
 
 export const typeDefs = gql`
   type User {
@@ -12,12 +12,21 @@ export const typeDefs = gql`
     token: String
     user: User
   }
-    type Query{
+  type Query {
     _empty: String
-    }
+  }
 
   type Mutation {
-    signup(email: String!, firstName: String!, lastName: String!, password: String!): AuthPayload
+    signup(
+      email: String!
+      firstName: String!
+      lastName: String!
+      password: String!
+    ): AuthPayload
     login(email: String!, password: String!): AuthPayload
+
+    requestPasswordReset(email: String!): Boolean
+
+    resetPassword(token: String!, password: String!): Boolean
   }
 `;

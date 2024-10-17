@@ -1,16 +1,109 @@
 .tips {
-    font-weight: bold;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
+}
+
+.candle-care-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-style: italic;
+  margin: 0;
+}
+
+.candle-care-list li {
+  margin-bottom: 5px;
+  padding-left: 0;
+}
+
+.candle-care {
+  background: linear-gradient(135deg, rgb(234, 165, 165), rgb(234, 214, 179));
+  padding: 20px;
+  max-width: 1200px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+
+}
+
+.candle-care h2 {
+  text-align: center;
+  white-space: normal;
+  font-size: 2.1em;
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  color: rgb(101, 10, 122);
+  border-bottom: 2px dashed black;
+}
+
+@media (max-width: 600px) {
+  .candle-care h2 {
+    text-align: center;
+    white-space: normal;
+    margin: 0;
     margin-bottom: 10px;
-    font-style: italic  ;
-    color:dodgerblue;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    font-weight: bold;
   }
 
-  .candle-care-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    font-style: italic;
+  .candle-care {
+    padding: 8px;
+    align-items: center;
   }
-  
-  .candle-care-list li {
-    margin-bottom: 5px;
+  .tips {
+    margin-bottom: 20px; 
+    padding: 0 10px; 
   }
+}
+
+@media (max-width: 1200px) {
+  .candle-care {
+    padding: 15px;
+  }
+
+  .candle-care h2 {
+    font-size: 1.75em;
+    /* Adjust font size for smaller screens */
+    font-weight: bold;
+
+  }
+}
+
+@media (max-width: 992px) {
+  .candle-care {
+    padding: 10px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .candle-care h2 {
+    font-size: 1.5em;
+    /* Adjust font size for smaller screens */
+    font-weight: bold;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .candle-care {
+    padding: 8px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .candle-care h2 {
+    font-size: 1.25em;
+    /* Adjust font size for smaller screens */
+    font-weight: bold;
+
+  }
+}
