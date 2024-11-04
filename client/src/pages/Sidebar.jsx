@@ -8,7 +8,7 @@ const Sidebar = ({ className }) => {
         to="favorites"
         className={({ isActive }) => (isActive ? 'active' : '')}
       >
-        Favorites
+       My Favorites
       </NavLink>
       <NavLink
         to="current-orders"

@@ -1,107 +1,174 @@
 .user-page {
-    display: flex;
-   
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center content horizontally */
 }
-
-
 
 .sidebar {
-    width: 0;
-    background-color: lightgray;
-    padding: 15px;
-    position: relative;
-    top: 60px;
-    left: 0;
-    height: calc(100vh - 60px); /* Adjust height to account for header */
-
-    overflow-y: auto;
-    border: 2px solid black;
-    transition: width 0.3s ease;
-    visibility: hidden;
-}
-
-.sidebar.active {
-    width: 182px;
-    visibility: visible;
+  width: fit-content; 
+  background-color: hsl(0, 19%, 90%);
+  padding: 15px;
+  height: auto;
+  overflow-y: auto;
+  border: 2px solid black;
+  transition: width 0.3s ease;
+  visibility: visible;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .sidebar a {
-    display: block;
-    color: #000;
-    text-decoration: none;
-    padding: 10px 0;
-    transition: color 0.3s ease;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 10px;
+  transition: color 0.3s ease;
+  margin: 2px;
+  text-align: center;
 }
 
 .sidebar a.active {
-    color: #007bff;
+  color: #670c73;
 }
 
 .sidebar a:hover {
-    color: #0056b3;
+  color: #2369d2;
 }
 
-
-
 .content {
-    flex: 1;
-    padding: 20px;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-  }
+  flex: 1;
+  padding: 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Ensure the content takes full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
 
 .content h1 {
-    margin: 0;
-    font-size: 2em;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 0;
+  font-style: italic;
+  font-size: 3em;
+  font-weight: bold;
+  color: #7b0686;
+  white-space: nowrap; /* Prevent text from wrapping */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  text-transform: uppercase; /* Transform text to uppercase */
+}
+
+/* Media Queries for Tablets */
+@media (max-width: 992px) {
+  .user-page {
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
   }
-.content.active {
-    margin-left: 182px;
-    /* Adjust this value if you want a different margin when sidebar is active */
+
+  .sidebar {
+    width: fit-content; /* Full width for sidebar */
+    height: auto; /* Auto height for sidebar */
+    top: 0; /* Reset top position */
+    left: 0; /* Reset left position */
+    bottom: auto; /* Reset bottom position */
+    flex-wrap: nowrap;
+  }
+
+  .sidebar a {
+    padding: 6px 8px; /* Adjust padding for tablets */
+    margin: 1px; /* Adjust margin for tablets */
+  }
+
+  .content {
+    margin-left: 0;
+    top: 0;
+    width: 100%; /* Full width for content */
+  }
+
+  .content h1 {
+    font-size: 2.5em; /* Adjust font size for tablets */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
 }
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
-    .user-page {
-        flex-direction: column;
-        /* Stack sidebar and content vertically */
-    }
+  .user-page {
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+  }
 
-    .sidebar {
-        width: 100%;
-        /* Full width for sidebar */
-        height: auto;
-        /* Auto height for sidebar */
-        position: relative;
-        /* Relative positioning */
-        top: 0;
-        /* Reset top position */
-        left: 0;
-        /* Reset left position */
-        bottom: auto;
-        /* Reset bottom position */
+  .sidebar {
+    width: fit-content; /* Full width for sidebar */
+    height: auto; /* Auto height for sidebar */
+    top: 0; /* Reset top position */
+    left: 0; /* Reset left position */
+    bottom: auto; /* Reset bottom position */
+    padding-left: 12px; /* Add padding on the left */
+    padding-right: 12px; /* Add padding on the right */
+    flex-wrap: nowrap;
+  }
 
-    }
+  .sidebar a {
+    padding: 2px 7px; /* Adjust padding for mobile devices */
+    margin: 1px; /* Adjust margin for mobile devices */
+  }
 
-    .sidebar.active {
-        width: 100%;
-        /* Full width for active sidebar */
-    }
+  .content {
+    margin-left: 0;
+    top: 0;
+    width: 100%; /* Full width for content */
+    padding-left: 10px; /* Add padding on the left */
+    padding-right: 10px; /* Add padding on the right */
+  }
 
-    .content {
-        margin-left: 0;
-        /* Reset margin for content */
-        top: 0;
-        /* Reset top position */
-    }
+  .content h1 {
+    font-size: 2em; /* Adjust font size for mobile devices */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+}
 
-    .content.active {
-        margin-left: 0;
-        /* Reset margin for active content */
-    }
+/* Media Queries for Small Mobile Devices */
+@media (max-width: 480px) {
+  .user-page {
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+  }
 
+  .sidebar {
+    width: fit-content; /* Full width for sidebar */
+    height: auto; /* Auto height for sidebar */
+    top: 0; /* Reset top position */
+    left: 0; /* Reset left position */
+    bottom: auto; /* Reset bottom position */
+    padding-left: 10px; /* Add padding on the left */
+    padding-right: 10px; /* Add padding on the right */
+    flex-wrap: nowrap;
+  }
 
+  .sidebar a {
+    padding: 4px 6px; /* Adjust padding for small mobile devices */
+    margin: 1px; /* Adjust margin for small mobile devices */
+  }
+
+  .content {
+    margin-left: 0;
+    top: 0;
+    width: 100%; /* Full width for content */
+    padding-left: 10px; /* Add padding on the left */
+    padding-right: 10px; /* Add padding on the right */
+  }
+
+  .content h1 {
+    font-size: 1.5em; /* Adjust font size for small mobile devices */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
 }

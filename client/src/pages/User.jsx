@@ -18,7 +18,7 @@ const User = () => {
 
   return (
     <div className="user-page">
-      <Sidebar className="active" />
+      <Sidebar className="sidebar" />
       <div className="content">
         <h1>
           Welcome,{" "}
