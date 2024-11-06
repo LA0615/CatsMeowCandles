@@ -35,7 +35,7 @@ const ReturnPolicy = () => {
           <p className="info-item">If you have any questions about our policy, please contact us:</p>
         </li>
         <li>
-          <p><a href={`mailto:${atob(email)}`}>Email</a></p>
+          <p className="info-item"><a href={`mailto:${atob(email)}`}>Email</a></p>
         </li>
       </ul>
     </div>
