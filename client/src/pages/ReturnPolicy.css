@@ -1,18 +1,24 @@
 .return-policy {
     padding: 10px;
-    background-color: #f9f9f9;
-    border: 2px solid rgb(242, 226, 207);
-    border-radius: 5px;
+    background-color: #f1e8de;
     width: 100%;
+    border: 5px solid;
+    border-radius: 10px;
+    border-image: linear-gradient(45deg, #f4ded8, #f1c29e) 1;
+    /* Gradient border */
+
 }
+
 .return-policy h2 {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
     font-style: italic;
+    font-size: 2em;
 
 }
+
 .return-policy .effective-date {
     margin-bottom: 20px;
     color: #007bff;
@@ -27,11 +33,14 @@
     font-weight: bold;
     text-align: justify;
     border-bottom: dashed 2px black;
+    text-align: justify;
+    font-size: 1.5em;
 }
 
 .return-policy .red-bold-item {
     color: red;
     font-weight: bold;
+    text-align: left;
 }
 
 .return-policy .black-bold-numbers li::marker {
@@ -42,4 +51,35 @@
 .return-policy .info-item {
     font-weight: bold;
     color: black;
+    text-align: left;
+}
+
+/* Media Queries for Tablets */
+@media (max-width: 992px) {
+    .return-policy .thank-you-message {
+        font-size: 1.5em;
+        /* Adjust font size for tablets */
+        padding: 10px;
+        /* Add padding for better readability */
+    }
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .return-policy .thank-you-message {
+        font-size: 1.2em;
+        /* Adjust font size for mobile devices */
+        padding: 8px;
+        /* Add padding for better readability */
+    }
+}
+
+/* Media Queries for Small Mobile Devices */
+@media (max-width: 480px) {
+    .return-policy .thank-you-message {
+        font-size: 1em;
+        /* Adjust font size for small mobile devices */
+        padding: 5px;
+        /* Add padding for better readability */
+    }
 }
