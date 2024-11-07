@@ -66,6 +66,45 @@
   text-transform: uppercase; /* Transform text to uppercase */
 }
 
+.favorite-animation {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 2px dashed #ff7e7e;
+  border-radius: 8px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animation-text {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.explore-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #a590d2;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+  background-color: #c9a8ed;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
 /* Media Queries for Tablets */
 @media (max-width: 992px) {
   .user-page {
