@@ -25,8 +25,11 @@ export const typeDefs = gql`
     ): AuthPayload
     login(email: String!, password: String!): AuthPayload
 
-    requestPasswordReset(email: String!): Boolean
-
-    resetPassword(token: String!, password: String!): Boolean
+  forgotPassword(email: String!): Boolean
+  resetPassword(token: String!, password: String!): PasswordResetResponse
   }
+  type PasswordResetResponse {
+  success: Boolean!
+  message: String!
+}
 `;

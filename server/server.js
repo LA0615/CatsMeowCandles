@@ -1,10 +1,10 @@
 
+import 'dotenv/config';
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import mongoose from 'mongoose';
 import { typeDefs, resolvers } from './schemas/index.js';
 import jwt from 'jsonwebtoken';
-import 'dotenv/config';
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/CatsMeowCandles')
