@@ -37,6 +37,8 @@ const ResetPassword = () => {
       await resetPassword({ variables: { token, password } });
       setMessage('Password reset successfully');
       setError('');
+      setPassword('');
+      setConfirmPassword('');
     } catch (err) {
       console.error('Reset password error:', err);
       setError('Error resetting password');

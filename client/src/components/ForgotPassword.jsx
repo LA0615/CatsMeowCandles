@@ -27,20 +27,37 @@ const ForgotPassword = () => {
       return;
     }
     setLoading(true);
-    try {
-      const { data } = await forgotPassword({ variables: { email } });
-      setMessage(data.forgotPassword);
-      setError('');
-      setEmail(''); // Clear the email input field
-    } catch (err) {
-      console.error('Forgot password error:', err);
-      setError('Error sending password reset email');
-      setMessage('');
-    } finally {
-      setLoading(false);
+  //   try {
+  //     const { data } = await forgotPassword({ variables: { email } });
+  //     setMessage(data.forgotPassword);
+  //     setError('');
+  //     setEmail(''); // Clear the email input field
+  //   } catch (err) {
+  //     console.error('Forgot password error:', err);
+  //     setError('Error sending password reset email');
+  //     setMessage('');
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+  try {
+    const { data } = await forgotPassword({ variables: { email } });
+    if (data?.forgotPassword) {
+      setMessage("If the email is registered, you'll receive a reset link shortly.");
+    } else {
+      setMessage("If the email is registered, you'll receive a reset link shortly.");
     }
-  };
-
+    setError('');
+    setEmail(''); // Clear the email input field
+  } catch (err) {
+    console.error('Forgot password error:', err);
+    // Set a more specific error message
+    setError('Error sending password reset email. Please try again later.');
+    setMessage('');
+  } finally {
+    setLoading(false);
+  }
+};
   return (
     <Form onSubmit={handleSubmit}>
       {message && <Alert variant="success">{message}</Alert>}
