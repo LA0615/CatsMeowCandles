@@ -8,7 +8,7 @@ const mg = mailgun.client({
 });
 //added async to function
 export const sendPasswordResetEmail = async (email, token) => {
-  const resetLink = `${process.env.FRONTEND_URL || 'http://localhost:3000'}/reset-password/${token}`; 
+  const resetLink = `${process.env.FRONTEND_URL || 'http://localhost:5173'}/reset-password/${token}`; 
 
   const data = {
     from: "Cat's Meow Candles <no-reply@catsmeowcandles.com>",

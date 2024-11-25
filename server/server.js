@@ -38,7 +38,14 @@ const server = new ApolloServer({
 // Start Apollo Server with HTTP
 const startServer = async () => {
   await startStandaloneServer(server, {
-    listen: { port: process.env.PORT || 4000 },
+    listen: { 
+      port: process.env.PORT || 4000,
+      cors:{
+        origin: 'http://localhost:5173',  //need to change to https://catsmeowcandles.com
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
+      }
+    },
   });
 
   console.log(`🚀 Server ready at http://localhost:${process.env.PORT || 4000}`);
