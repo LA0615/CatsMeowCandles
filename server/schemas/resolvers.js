@@ -103,6 +103,7 @@ const resolvers = {
       try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
+//find user in the database by userId
         const user = await User.findById(decoded.userId);
         if (!user) {
           return {
@@ -110,11 +111,11 @@ const resolvers = {
             message: "Invalid or expired token",
           };
         }
-
+//hash the new password and save it to the user
         const hashedPassword = await bcrypt.hash(password, 10);
-        user.password = hashedPassword;
-        await user.save();
-
+       // user.password = hashedPassword;
+        await User.findByIdAndUpdate(decoded.userId, { password: hashedPassword }, { new: true });
+//return success message
         return {
           success: true,
           message: "Password reset successfully",
