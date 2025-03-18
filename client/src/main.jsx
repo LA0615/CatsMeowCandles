@@ -4,10 +4,15 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import Home from "./pages/Home.jsx";
- import Shop from "./pages/Shop.jsx";
+import Shop from "./pages/Shop.jsx";
 import User from "./pages/User.jsx";
 import ForgotPassword from './components/ForgotPassword.jsx';
- import ResetPassword from './components/ResetPassword.jsx';
+import ResetPassword from './components/ResetPassword.jsx';
+import Candles from './pages/Candles.jsx';
+import TeaLights from './pages/TeaLights.jsx';
+ import WaxMelts from './pages/WaxMelts.jsx';
+ import Votives from './pages/Votives.jsx';
+  import SpecialtyCandles from './pages/SpecialtyCandles.jsx';
 import Cart from "./pages/Cart.jsx";
 import CandleCare from "./pages/CandleCare.jsx"; 
 import PrivacyTerms from "./pages/PrivacyTerms.jsx";
@@ -24,10 +29,16 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Home /> },
-       { path: "shop", element: <Shop /> },
-        {path: "forgot-password", element: <ForgotPassword /> },
+       { path: "shop", element: <Shop /> }, //shop page and products 
+       { path: "shop/candles", element: <Candles /> },
+      { path: "shop/tea-lights", element: <TeaLights /> },
+       { path: "shop/wax-melts", element: <WaxMelts /> },
+      { path: "shop/votives", element: <Votives /> },
+      { path: "shop/specialty", element: <SpecialtyCandles /> },
+        {path: "forgot-password", element: <ForgotPassword /> }, //forgot password and reset password
        {path: "reset-password/:token", element: <ResetPassword /> },
-       { path: "user/*", element: <User />, children: [
+
+       { path: "user/*", element: <User />, children: [ //user page and account info
         { path: "favorites", element: <Favorites /> },
         { path: "current-orders", element: <CurrentOrders /> },
         { path: "past-orders", element: <PastOrders /> },
@@ -36,7 +47,7 @@ const router = createBrowserRouter([
         { path: "candle-care", element: <CandleCare /> },
       ]},
 
-      { path: "cart", element: <Cart /> },
+      { path: "cart", element: <Cart /> }, //cart page
       { path: "privacy", element: <PrivacyTerms /> },
       {path: "return", element: <ReturnPolicy /> },
     ],
