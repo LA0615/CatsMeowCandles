@@ -1,23 +1,78 @@
 //TO DO:
-//ADD SHOP ITEMS IN CARDS AND CATEGORIES
+//ADD SHOP ITEMS IN CARDS AND CATEGORIES NEED CARDS OR GRID BOXES FOR EACH LINK CATEGORY AND FIX REPEATED LINKS
 //ADD RETURN POLICY and candle care somehwere on the page
-//Add to favorites in the user page using a favorite button on the shop page
-//FUNCTION TO ADD ITEMS TO CART WHEN SELECTED or a button to add to cart
+//Add to favorites in the user page using a favorite button on the shop page LINK TO FAVORITES ON USERPAGE
+//FUNCTION TO ADD ITEMS TO CART WHEN SELECTED or a button to add to cart ON EACH PRODUCT PAGE
 
-
-//import  { useState} from 'react';
-//import './Shop.css'; 
-//import Collapse from "react-bootstrap/Collapse";
+//import  { useState, useEffect} from 'react';
+import { Card } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./Shop.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
 //import CandleCare from "./CandleCare";
 //import ReturnPolicy from "./ReturnPolicy";
 
+// Category Data for Shop Page
+const categories = [
+  {
+    path: "/shop/candles",
+    image: "/images/candles.jpg",
+    description: "Explore our hand-poured candles, crafted for a warm and inviting ambiance.",
+  },
+  {
+    path: "/shop/tea-lights",
+    image: "/images/tea-lights.jpg",
+    description: "Our tea lights are perfect for creating a cozy glow. These  tea lights are small but mighty.",
+  },
+  {
+    path: "/shop/wax-melts",
+    image: "/images/wax-melts.jpg",
+    description: "These flameless wax melts fill your home with long-lasting, aromatic fragrance—perfect for creating a cozy and inviting atmosphere."
+  },
+  {
+    path: "/shop/votives",
+    image: "/images/votives.jpg",
+    description: "Our elegant votive candles are compact yet stylish, casting a warm glow that adds charm and ambiance to any space.",
+  },
+];
 
 const Shop = () => {
+  return (
+    <Container>
+      {/* Banner Section */}
+      <div className="shop-banner text-center">
+        <h1>Specialty Candles</h1>
+        <p>Hand-poured artistry for those who love the extraordinary</p>
+        <Link to="/shop/specialty">
+          <button className="btn btn-primary">Shop Now</button>
+        </Link>
+      </div>
 
-}
-    
-    export default Shop;
+      {/* Category Grid */}
+      <Row className="mt-4">
+        {categories.map((category, index) => (
+          <Col key={index} xs={12} sm={6} md={3} className="mb-4 text-center">
+            <Card className="shadow-sm">   
+            {category.image && (
+    <Card.Img variant="top" src={category.image} alt={category.name} />
+  )}        
+              <Card.Body>
+                <Card.Title>{category.name}</Card.Title>
+                {console.log("Rendering Description", category.description)}
+                <Card.Text>{category.description}</Card.Text>
+                <Link to={category.path} className="btn btn-primary">
+                  Shop Now
+                </Link>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
 
+    </Container>
+  );
+};
 
-
+export default Shop;
