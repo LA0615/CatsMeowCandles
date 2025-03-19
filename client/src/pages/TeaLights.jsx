@@ -1,3 +1,6 @@
+
+//Add to favorites in the user page using a favorite button on the shop page LINK TO FAVORITES ON USERPAGE
+
 const TeaLights = () => {
     return (
       <div>
