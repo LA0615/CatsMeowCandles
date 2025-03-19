@@ -1,3 +1,7 @@
+//FUNCTION TO ADD ITEMS TO CART WHEN SELECTED or a button to add to cart ON EACH PRODUCT PAGE
+//Function to add item to favtories on the user page when logged in
+//add return policy and candle care instructions
+//add back to shop button/category banner
 
 
 import { Container, Row, Col, Card } from "react-bootstrap";

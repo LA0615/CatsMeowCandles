@@ -1,8 +1,4 @@
-//TO DO:
-//ADD SHOP ITEMS IN CARDS AND CATEGORIES NEED CARDS OR GRID BOXES FOR EACH LINK CATEGORY AND FIX REPEATED LINKS
-//ADD RETURN POLICY and candle care somehwere on the page
-//Add to favorites in the user page using a favorite button on the shop page LINK TO FAVORITES ON USERPAGE
-//FUNCTION TO ADD ITEMS TO CART WHEN SELECTED or a button to add to cart ON EACH PRODUCT PAGE
+
 
 //import  { useState, useEffect} from 'react';
 import { Card } from "react-bootstrap";
@@ -11,29 +7,28 @@ import { Link } from "react-router-dom";
 import "./Shop.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
-//import CandleCare from "./CandleCare";
-//import ReturnPolicy from "./ReturnPolicy";
+
 
 // Category Data for Shop Page
 const categories = [
   {
     path: "/shop/candles",
-    image: "/images/candles.jpg",
+    image: "/jellyjars.jpg",
     description: "Explore our hand-poured candles, crafted for a warm and inviting ambiance.",
   },
   {
     path: "/shop/tea-lights",
-    image: "/images/tea-lights.jpg",
+    image: "/tealights.jpeg",
     description: "Our tea lights are perfect for creating a cozy glow. These  tea lights are small but mighty.",
   },
   {
     path: "/shop/wax-melts",
-    image: "/images/wax-melts.jpg",
+    image: "/melts.jpg",
     description: "These flameless wax melts fill your home with long-lasting, aromatic fragrance—perfect for creating a cozy and inviting atmosphere."
   },
   {
     path: "/shop/votives",
-    image: "/images/votives.jpg",
+    image: "/votives.jpg",
     description: "Our elegant votive candles are compact yet stylish, casting a warm glow that adds charm and ambiance to any space.",
   },
 ];

@@ -49,7 +49,8 @@ const router = createBrowserRouter([
 
       { path: "cart", element: <Cart /> }, //cart page
       { path: "privacy", element: <PrivacyTerms /> },
-      {path: "return", element: <ReturnPolicy /> },
+      {path: "return-policy", element: <ReturnPolicy /> },
+      {path: "candle-care", element: <CandleCare /> },
     ],
   },
 ]);
