@@ -41,18 +41,24 @@ const Shop = () => {
         <h1>Specialty Candles</h1>
         <p>Hand-poured artistry for those who love the extraordinary</p>
         <Link to="/shop/specialty">
-          <button className="btn btn-primary">Shop Now</button>
+          <button className="btn">Shop Now</button>
         </Link>
       </div>
 
-      {/* Category Grid */}
-      <Row className="mt-4">
-        {categories.map((category, index) => (
-          <Col key={index} xs={12} sm={6} md={3} className="mb-4 text-center">
-            <Card className="shadow-sm">   
-            {category.image && (
-    <Card.Img variant="top" src={category.image} alt={category.name} />
-  )}        
+      
+<Row className="mt-4">
+  {categories.map((category, index) => (
+    <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4 text-center">
+      <Card className="shadow-sm">   
+        {category.image && (
+          <Card.Img 
+            variant="top" 
+            src={category.image} 
+            alt={category.name} 
+            className="card-img-top"
+          />
+        )}
+
               <Card.Body>
                 <Card.Title>{category.name}</Card.Title>
                 {console.log("Rendering Description", category.description)}

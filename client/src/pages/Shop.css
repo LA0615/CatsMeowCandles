@@ -1,0 +1,310 @@
+.card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: none !important; /* Removes any unwanted card shadow */
+    border: 2px solid black; 
+    border-radius: 10px !important; /* Rounds the card corners */
+    font-family: "Poppins", sans-serif; 
+    font-size: 1rem; 
+    margin: 10px;
+}
+
+.card-img-top {
+    height: 200px; /* Keeps image size consistent */
+    object-fit: cover; /* Ensures uniform image display */
+  }
+
+  .card-body {
+  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 0.8rem;
+  }
+
+  .card-text {
+   font-size: 1rem;
+    margin-bottom: 1rem;
+   font-weight: 800;
+    text-shadow: none !important; 
+
+  }
+
+  .card button {
+   font-size: 0.9rem;
+   padding: 6px 10px;
+   width:auto;
+   max-height: 40px;
+    align-self: center;
+    border-radius: 5px;
+  }
+
+  .card-title {
+    font-size: 1.2rem; 
+    font-weight: 600; 
+margin-bottom: 8px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.shop-banner {
+    background: linear-gradient(to right, rgba(243, 233, 220, 0.6), rgba(224, 201, 166, 0.6)), url('shopbanner.png');
+    background-size: cover; /* Ensure the background image covers the entire element */
+    background-position: center; /* Center the background image */
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 15px; /* Softer, rounded edges */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); /* More defined shadow */
+    max-width: 950px;
+    margin: 50px auto;
+    border: 3px solid #8a6c5c; /* Subtle border to frame it */
+    position: relative;
+  }
+  .shop-banner h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #333; /* Dark gray for sophistication */
+    margin-bottom: 25px;
+    text-shadow: none; /* Removes any text shadow */
+  }
+  
+  .shop-banner p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 20px;
+    text-shadow: none; /* Removes any text shadow */
+  }
+  
+  .shop-banner button {
+    background-color: #8a6c5c;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .shop-banner button:hover {
+    background-color: #735a4c; /* Slightly darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Adjust column sizes */
+  .col {
+    padding: 8px;
+  }
+  
+  @media (max-width: 992px) { /* Tablet and smaller */
+    .col {
+      flex: 0 0 50%; /* 2 cards per row */
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: 768px) { /* Tablet */
+    .card {
+      font-size: 0.9rem;
+    }
+    .card-title {
+      font-size: 1rem;
+    }
+    .card button {
+      font-size: 0.8rem;
+      padding: 5px 8px;
+    }
+    .col {
+      flex: 0 0 100%; /* 1 card per row */
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Mobile */
+    .card {
+      font-size: 0.8rem;
+    }
+    .card-title {
+      font-size: 0.9rem;
+    }
+    .card-text {
+      font-size: 0.85rem;
+    }
+    .card button {
+      font-size: 0.8rem;
+      padding: 5px 8px;
+      max-height: 38px;
+    }
+  }
+  
+  .shop-banner h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333; /* Dark gray for sophistication */
+    margin-bottom: 25px;
+    text-shadow: none; /* Removes any text shadow */
+  }
+  
+  .shop-banner p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    color: black;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-shadow: none; /* Removes any text shadow */
+  }
+  
+  .shop-banner button {
+    background-color: #8a6c5c;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .shop-banner button:hover {
+    background-color: #735a4c; /* Slightly darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Adjust column sizes */
+  .col {
+    padding: 8px;
+  }
+  
+  @media (max-width: 992px) { /* Tablet and smaller */
+    .col {
+      flex: 0 0 50%; /* 2 cards per row */
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: 768px) { /* Tablet */
+    .card {
+      font-size: 0.9rem;
+    }
+    .card-title {
+      font-size: 1rem;
+    }
+    .card button {
+      font-size: 0.8rem;
+      padding: 5px 8px;
+    }
+    .col {
+      flex: 0 0 100%; /* 1 card per row */
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Mobile */
+    .card {
+      font-size: 0.8rem;
+    }
+    .card-title {
+      font-size: 0.9rem;
+    }
+    .card-text {
+      font-size: 0.85rem;
+    }
+    .card button {
+      font-size: 0.8rem;
+      padding: 5px 8px;
+      max-height: 38px;
+    }
+  }
+.shop-banner h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333; /* Dark gray for sophistication */
+    margin-bottom: 25px;
+    text-shadow: none; /* Removes any text shadow */
+
+}
+
+.shop-banner p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    color: black;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-shadow: none; /* Removes any text shadow */
+
+}
+
+.shop-banner button {
+    background-color: #8a6c5c; 
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.shop-banner button:hover {
+    background-color: #735a4c; /* Slightly darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+/* Adjust column sizes */
+.col {
+    padding: 8px;
+}
+
+@media (max-width: 992px) { /* Tablet and smaller */
+    .col {
+        flex: 0 0 50%; /* 2 cards per row */
+        max-width: 50%;
+    }
+}
+
+  @media (max-width: 768px) { /* Tablet */
+    .card {
+        font-size: 0.9rem;
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+    .card button {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+    .col {
+        flex: 0 0 100%; /* 1 card per row */
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .card {
+        font-size: 0.8rem;
+    }
+    .card-title {
+        font-size: 0.9rem;
+    }
+    .card-text {
+        font-size: 0.85rem;
+    }
+    .card button {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+        max-height: 38px;
+    }
+}
