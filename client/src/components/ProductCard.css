@@ -1,0 +1,137 @@
+/* Layout for the candles page */
+.candles-page {
+    padding: 24px;
+  }
+  
+  /* Product Grid Layout */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 24px;
+  }
+  
+  @media (min-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+  
+  /* Back to Shop Button Styles */
+  .back-to-shop-button .button {
+    display: inline-flex;
+    align-items: center;
+    background-color: lightgrey; /* Light grey background */
+    color: black; /* Black text */
+    border: 2px solid black; /* Black border */
+    padding: 8px 16px; /* Padding around the text and arrow */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 16px; /* Adjust font size */
+    font-weight: 600; /* Bold text */
+    border-radius: 4px; /* Optional: rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  .back-to-shop-button .button:hover {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    border-color: black; /* Keep border black on hover */
+  }
+  
+  .back-to-shop-button .button:active {
+    background-color: #333; /* Darker background when clicked */
+    color: white; /* Keep text white on click */
+  }
+  
+  .back-to-shop-button .arrow {
+    margin-right: 8px; /* Add space between the text and the arrow */
+  }
+  
+  /* Product Card Styles */
+  .product-card {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .product-name {
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 12px;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+    margin-top: 8px;
+  }
+  
+  .selected-option {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #777;
+    margin-top: 8px;
+  }
+  
+  .option-dropdown {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 12px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .add-to-cart-btn,
+  .add-to-favorites-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .add-to-favorites-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .add-to-favorites-btn:hover {
+    background-color: #5a6268;
+  }
+  
