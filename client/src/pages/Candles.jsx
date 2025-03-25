@@ -9,7 +9,7 @@ import "../components/CategoryBanner.css";
 const placeholderProducts = [
   {
     id: 1,
-    name: "12 oz  Candles",
+    name: "Seasonal  Candles",
     description: "change this text.",
     options: ["Small", "Medium", "Large"], // Example of product options
     images: [

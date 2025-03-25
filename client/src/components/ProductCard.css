@@ -1,137 +1,256 @@
-/* Layout for the candles page */
+
+  
+ /* Layout for the candles page */
+ html, body {
+  margin: 0; /* Ensure no unwanted margin on the body */
+  padding: 0; /* Reset padding */
+  width: 100%; 
+}
+
 .candles-page {
-    padding: 24px;
-  }
-  
-  /* Product Grid Layout */
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    padding: 24px;
-  }
-  
-  @media (min-width: 768px) {
-    .product-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .product-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-  }
-  
-  /* Back to Shop Button Styles */
-  .back-to-shop-button .button {
-    display: inline-flex;
-    align-items: center;
-    background-color: lightgrey; /* Light grey background */
-    color: black; /* Black text */
-    border: 2px solid black; /* Black border */
-    padding: 8px 16px; /* Padding around the text and arrow */
-    text-decoration: none; /* Remove underline from the link */
-    font-size: 16px; /* Adjust font size */
-    font-weight: 600; /* Bold text */
-    border-radius: 4px; /* Optional: rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Add transition for hover effect */
-  }
-  
-  .back-to-shop-button .button:hover {
-    background-color: black; /* Black background */
-    color: white; /* White text */
-    border-color: black; /* Keep border black on hover */
-  }
-  
-  .back-to-shop-button .button:active {
-    background-color: #333; /* Darker background when clicked */
-    color: white; /* Keep text white on click */
-  }
-  
-  .back-to-shop-button .arrow {
-    margin-right: 8px; /* Add space between the text and the arrow */
-  }
-  
-  /* Product Card Styles */
+  padding: 24px;
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+
+/* Product Grid Layout - Different grid for different screen sizes */
+.product-grid {
+  display: grid;
+  gap: 20px;
+  padding: auto;
+  max-width: 900px; /* Limit grid width */
+  box-sizing: border-box; /* Prevent any overflow */
+  margin: 0 auto; /* Center align the grid */
+
+}
+
+/* Back to Shop Button Styles */
+.back-to-shop-button .button {
+  display: inline-flex;
+  align-items: center;
+  background-color: lightgrey;
+  color: black;
+  border: 2px solid black;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.back-to-shop-button .button:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.back-to-shop-button .button:active {
+  background-color: #333;
+  color: white;
+}
+
+.back-to-shop-button .arrow {
+  margin-right: 8px;
+}
+
+/* Product Card Styles */
+.product-card {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure no overflow for product image */
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.product-description {
+  font-size: 1rem;
+  text-align: center;
+  color: #555;
+  margin-top: 8px;
+}
+
+.selected-option {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #777;
+  margin-top: 8px;
+}
+
+.option-dropdown {
+  width: 80%;
+  max-width: 400px;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 12px auto 0;
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+/* Common Button Styles - Ensuring Rectangular Buttons */
+.add-to-cart-btn,
+.add-to-favorites-btn {
+  padding: 12px 24px; /* Consistent padding to keep the button rectangular */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  width: auto; /* Ensures buttons do not stretch */
+  height: auto; /* Maintain consistent height */
+  display: inline-flex; /* Keep them aligned properly */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Button Colors */
+.add-to-cart-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+.add-to-favorites-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.add-to-favorites-btn:hover {
+  background-color: #5a6268;
+}
+
+/* MEDIA QUERIES */
+
+/* For screens 576px and larger (phones in landscape mode) */
+@media (min-width: 576px) and (max-width: 625px) {
+
+
   .product-card {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
+    width: 100%; /* Ensure product card stays within its grid column */
   }
-  
-  .product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .product-name {
-    font-size: 1.25rem;
-    text-align: center;
-    font-weight: 600;
-    margin-top: 12px;
-  }
-  
-  .product-description {
-    font-size: 1rem;
-    text-align: center;
-    color: #555;
-    margin-top: 8px;
-  }
-  
-  .selected-option {
-    font-size: 0.9rem;
-    text-align: center;
-    color: #777;
-    margin-top: 8px;
-  }
-  
-  .option-dropdown {
-    width: 100%;
-    padding: 8px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 12px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
-  }
-  
+
   .add-to-cart-btn,
   .add-to-favorites-btn {
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
+    padding: 12px 24px; /* Keep consistent padding for rectangular shape */
+    font-size: 1rem;
+    width: auto; /* Avoid button stretching */
+  }
+
+  .option-dropdown {
+    width: 80%; /* Adjust dropdown width */
+  }
+}
+
+/* For screens 625px and below (small mobile screens) */
+@media (max-width: 625px) {
+
+  .product-card {
+    width: 100%; /* Ensure product card takes full width */
+  }
+
+  .add-to-cart-btn,
+  .add-to-favorites-btn {
+    padding: 12px 24px; /* Keep consistent padding */
+    font-size: 1rem;
+    width: 100%; /* Make buttons full-width to fit screen */
+  }
+
+  .option-dropdown {
+    width: 100%; /* Make dropdown full-width for consistency */
+  }
+}
+
+/* For screens 768px and larger (tablets and above) */
+@media (min-width: 768px) {
+
+  .product-card {
+    width: 100%; /* Ensure product card stays within the grid */
+  }
+
+  .add-to-cart-btn,
+  .add-to-favorites-btn {
+    padding: 12px 24px; /* Keep consistent padding */
     font-size: 1rem;
   }
-  
-  .add-to-cart-btn {
-    background-color: #007bff;
-    color: white;
+
+  .option-dropdown {
+    width: 60%; /* Wider dropdown on tablet */
   }
+}
+
+/* For screens 1024px and larger (desktops and above) */
+@media (min-width: 1024px) {
   
-  .add-to-cart-btn:hover {
-    background-color: #0056b3;
+  .product-card {
+    width: 100%; /* Ensure product card stays within grid */
+    margin: 0 auto; /* Center product cards */
   }
-  
+
+  .button-container {
+    gap: 15px; /* Increase space between buttons */
+  }
+
+  .add-to-cart-btn,
   .add-to-favorites-btn {
-    background-color: #6c757d;
-    color: white;
+    padding: 12px 24px; /* Keep consistent padding */
+    font-size: 1rem;
   }
-  
-  .add-to-favorites-btn:hover {
-    background-color: #5a6268;
+
+  .option-dropdown {
+    width: 50%; /* Further adjustment for desktop */
   }
-  
+}
+
+/* For screens 1200px and larger (large desktop screens) */
+@media (min-width: 1200px) {
+
+
+  .product-card {
+    width: 100%; /* Ensure product card stays within the grid */
+  }
+
+  .button-container {
+    gap: 20px; /* Extra space between buttons for large screens */
+  }
+
+  .add-to-cart-btn,
+  .add-to-favorites-btn {
+    padding: 14px 24px; /* Adjust padding to prevent oversized buttons */
+    font-size: 1.1rem; /* Slightly larger font size for large screens */
+  }
+
+  .option-dropdown {
+    width: 45%; /* Further adjustment for very large screens */
+  }
+}
