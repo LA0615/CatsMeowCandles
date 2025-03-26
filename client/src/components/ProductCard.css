@@ -1,26 +1,12 @@
-
-  
- /* Layout for the candles page */
- html, body {
-  margin: 0; /* Ensure no unwanted margin on the body */
-  padding: 0; /* Reset padding */
-  width: 100%; 
-}
-
-.candles-page {
-  padding: 24px;
-  box-sizing: border-box; /* Ensure padding doesn't affect layout */
-}
-
-/* Product Grid Layout - Different grid for different screen sizes */
+/* Default styles (Mobile First Approach) */
 .product-grid {
   display: grid;
-  gap: 20px;
-  padding: auto;
-  max-width: 900px; /* Limit grid width */
-  box-sizing: border-box; /* Prevent any overflow */
-  margin: 0 auto; /* Center align the grid */
-
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  justify-content: center; /* Ensures grid content is centered */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px; /* Adds a small margin to avoid screen cut-off */
 }
 
 /* Back to Shop Button Styles */
@@ -30,31 +16,30 @@
   background-color: lightgrey;
   color: black;
   border: 2px solid black;
-  padding: 8px 16px;
+  padding: 4px 10px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .back-to-shop-button .button:hover {
-  background-color: black;
-  color: white;
+  background-color: lightskyblue;
+  color: black;
   border-color: black;
 }
-
 .back-to-shop-button .button:active {
   background-color: #333;
   color: white;
 }
-
 .back-to-shop-button .arrow {
   margin-right: 8px;
 }
 
-/* Product Card Styles */
+/* Ensure product cards stay inside grid */
 .product-card {
+  width: 100%;
   border: 2px solid black;
   border-radius: 10px;
   padding: 10px;
@@ -62,7 +47,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   margin-bottom: 20px;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -71,36 +55,32 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius : 10px;
 }
-
 .product-name {
   font-size: 1.25rem;
   text-align: center;
   font-weight: 600;
   margin-top: 12px;
 }
-
 .product-description {
   font-size: 1rem;
   text-align: center;
   color: #555;
   margin-top: 8px;
 }
-
 .selected-option {
   font-size: 0.9rem;
   text-align: center;
   color: #777;
   margin-top: 8px;
 }
-
 .option-dropdown {
   width: 80%;
   max-width: 400px;
   padding: 8px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 4px solid #ccc;
   border-radius: 4px;
   margin: 12px auto 0;
   text-align: center;
@@ -116,19 +96,17 @@
   gap: 10px;
   padding: 0 10px;
 }
-
-/* Common Button Styles - Ensuring Rectangular Buttons */
+/* Default styles (Mobile First Approach) for buttons */
 .add-to-cart-btn,
 .add-to-favorites-btn {
-  padding: 12px 24px; /* Consistent padding to keep the button rectangular */
+  padding: 8px 18px; /* Default padding for small screens */
+  font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
   text-align: center;
-  width: auto; /* Ensures buttons do not stretch */
-  height: auto; /* Maintain consistent height */
-  display: inline-flex; /* Keep them aligned properly */
-  white-space: nowrap; /* Prevent text wrapping */
+  display: inline-flex;
+  width: auto; /* Keep width automatic so the button doesn't stretch */
+  justify-content: center; /* Center text inside button */
 }
 
 /* Button Colors */
@@ -150,107 +128,65 @@
   background-color: #5a6268;
 }
 
-/* MEDIA QUERIES */
-
-/* For screens 576px and larger (phones in landscape mode) */
-@media (min-width: 576px) and (max-width: 625px) {
-
-
-  .product-card {
-    width: 100%; /* Ensure product card stays within its grid column */
+@media (max-width: 599px) {
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 
   .add-to-cart-btn,
   .add-to-favorites-btn {
-    padding: 12px 24px; /* Keep consistent padding for rectangular shape */
-    font-size: 1rem;
-    width: auto; /* Avoid button stretching */
-  }
-
-  .option-dropdown {
-    width: 80%; /* Adjust dropdown width */
+    padding: 4px 20px; /* Consistent padding for small screens */
   }
 }
 
-/* For screens 625px and below (small mobile screens) */
-@media (max-width: 625px) {
-
-  .product-card {
-    width: 100%; /* Ensure product card takes full width */
+/* Tablets: Two columns */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .add-to-cart-btn,
   .add-to-favorites-btn {
-    padding: 12px 24px; /* Keep consistent padding */
-    font-size: 1rem;
-    width: 100%; /* Make buttons full-width to fit screen */
-  }
-
-  .option-dropdown {
-    width: 100%; /* Make dropdown full-width for consistency */
+    padding: 2px 14px; /* Larger padding for tablets */
+    font-size: 1rem; /* Smaller font size */
   }
 }
 
-/* For screens 768px and larger (tablets and above) */
-@media (min-width: 768px) {
-
-  .product-card {
-    width: 100%; /* Ensure product card stays within the grid */
+/* Desktops: Three columns */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .add-to-cart-btn,
   .add-to-favorites-btn {
-    padding: 12px 24px; /* Keep consistent padding */
-    font-size: 1rem;
-  }
-
-  .option-dropdown {
-    width: 60%; /* Wider dropdown on tablet */
+    padding: 4px 16px; /* Even larger padding for desktops */
+    font-size: 0.9rem;
   }
 }
 
-/* For screens 1024px and larger (desktops and above) */
-@media (min-width: 1024px) {
-  
-  .product-card {
-    width: 100%; /* Ensure product card stays within grid */
-    margin: 0 auto; /* Center product cards */
-  }
-
-  .button-container {
-    gap: 15px; /* Increase space between buttons */
+/* Large Desktops: Four columns */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .add-to-cart-btn,
   .add-to-favorites-btn {
-    padding: 12px 24px; /* Keep consistent padding */
-    font-size: 1rem;
-  }
-
-  .option-dropdown {
-    width: 50%; /* Further adjustment for desktop */
+    padding: 6px 14px; /* Extra large padding for large desktops */
+    font-size: 1rem; /* Slightly larger font size */
   }
 }
 
-/* For screens 1200px and larger (large desktop screens) */
-@media (min-width: 1200px) {
-
-
-  .product-card {
-    width: 100%; /* Ensure product card stays within the grid */
-  }
-
-  .button-container {
-    gap: 20px; /* Extra space between buttons for large screens */
+/* Extra Large Desktops: Larger padding and font size */
+@media (min-width: 1440px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .add-to-cart-btn,
   .add-to-favorites-btn {
-    padding: 14px 24px; /* Adjust padding to prevent oversized buttons */
-    font-size: 1.1rem; /* Slightly larger font size for large screens */
-  }
-
-  .option-dropdown {
-    width: 45%; /* Further adjustment for very large screens */
+    padding: 6px 16px; 
+    font-size: 1rem; /* Slightly larger font size */
   }
 }
