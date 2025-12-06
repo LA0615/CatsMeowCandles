@@ -1,4 +1,226 @@
-/*TODO: CENTER TITLE AND SUBTITLE  AND DESCRIPTION */
-/*TODO: ADD MEDIA QUERY FOR MOBILE AND ALL DEVICES */
-/*CENTER CANDLE CARE AND RETURN POLICY LINKS AND MAKE THEM A BIT SMALLER */
-/*TODDO: Move BACK TO SHOP TO BOTTOM OF PAGE */
+
+.category-banner {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin-bottom: 30px;
+  border-radius: 0;
+  border: 3px solid #8a6c5c;
+  border-top: none;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px; /* Add max-width */
+  margin-left: auto; /* Center the banner */
+  margin-right: auto; /* Center the banner */
+}
+
+.category-banner h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.category-banner p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.category-banner-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.category-banner-links a {
+  color: #007bff;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.category-banner-links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.category-banner-separator {
+  color: #999;
+  font-size: 1.2rem;
+}
+/* Back Button in Banner */
+.category-banner-back {
+  margin-top: 20px;
+}
+
+.category-banner-back .back-link {
+  display: inline-flex;
+  align-items: center;
+  color: #007bff;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.category-banner-back .back-link:hover {
+  color: #0056b3;
+  background-color: rgba(0, 123, 255, 0.1);
+  border-color: #007bff;
+}
+
+.category-banner-back .arrow {
+  margin-right: 6px;
+  font-size: 1rem;
+}
+/* Media Queries */
+
+/* Mobile: 480px and below */
+@media (max-width: 480px) {
+  .category-banner {
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #8a6c5c;
+    border-top: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%; /* Override max-width on mobile */
+  }
+
+  .category-banner h1 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+
+  .category-banner p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .category-banner-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .category-banner-links a {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .category-banner-separator {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet: 481px to 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .category-banner {
+    padding: 30px 20px;
+    margin-bottom: 25px;
+    border: 2.5px solid #8a6c5c;
+    border-top: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%; /* Override max-width on tablet */
+  }
+
+  .category-banner h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .category-banner p {
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+
+  .category-banner-links {
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  .category-banner-links a {
+    padding: 7px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Medium Devices: 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .category-banner {
+    padding: 35px 25px;
+    margin-bottom: 28px;
+    border: 2.75px solid #8a6c5c;
+    border-top: none;
+    width: 100%;
+  }
+
+  .category-banner h1 {
+    font-size: 2.2rem;
+    margin-bottom: 13px;
+  }
+
+  .category-banner p {
+    font-size: 1.05rem;
+    margin-bottom: 19px;
+  }
+
+  .category-banner-links {
+    gap: 19px;
+    margin-top: 19px;
+  }
+
+  .category-banner-links a {
+    padding: 7px 15px;
+    font-size: 0.98rem;
+  }
+}
+
+/* Large Devices: 1025px and above */
+@media (min-width: 1025px) {
+  .category-banner {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border: 3px solid #8a6c5c;
+    border-top: none;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .category-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .category-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .category-banner-links {
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .category-banner-links a {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  .category-banner-separator {
+    font-size: 1.2rem;
+  }
+}
