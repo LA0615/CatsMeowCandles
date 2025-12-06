@@ -1,7 +1,6 @@
 // TODO: Add backend logic for saving to user’s favorites list and having list show up on users page
 //TODO: FIx bug issue where it says a user must be logged in to save to favorites when the user is actually logged in.
 //ToDO:add logic to have product added to the cart page for checkout
-//TODO: Move BACK button to Bottom of page on ProductCardCSS
 
 //Product Card component for all product pages
 import { useState } from "react";

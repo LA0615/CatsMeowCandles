@@ -1,10 +1,18 @@
+import { useNavigate } from 'react-router-dom';
 import './ReturnPolicy.css';
 
 const ReturnPolicy = () => {
+  const navigate = useNavigate();
   const email = "Y2F0c21lb3djYW5kbGVzQGdtYWlsLmNvbQ=="; // Base64 encoded email
 
   return (
     <div className="return-policy">
+        <button 
+        onClick={() => navigate(-1)} 
+        className="back-button"
+      >
+        ← Back
+      </button>
       <h2>Return Policy</h2>
       <p className="effective-date">Effective Date: September 5, 2024</p>
       <p className="thank-you-message">

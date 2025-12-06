@@ -1,7 +1,6 @@
 import CategoryBanner from "../components/CategoryBanner"; 
 import ProductCard from "../components/ProductCard"; 
 import { useState } from "react"; 
-import { Link } from "react-router-dom"; 
 import "../components/ProductCard.css";
 import "../components/CategoryBanner.css";
 
@@ -85,14 +84,12 @@ const Candles = () => {
       <CategoryBanner 
         title="Our Candle Collection"
         description="Browse our hand-poured candles in different scents and sizes."
+        showBackButton={true}
+        backLink="/shop"
+        backText="Back to Shop"
       />
 
-      {/* Back to Shop Button */}
-      <div className="back-to-shop-button">
-        <Link to="/shop" className="button">
-        <span className="arrow">←</span> Back to Shop
-        </Link>
-      </div>
+      
 
       {/* Product Grid */}
       <div className="product-grid">

@@ -1,28 +1,38 @@
 .return-policy {
-    padding: 10px;
+    padding: 20px;
     background-color: #f1e8de;
     width: 100%;
+    max-width: 1200px;
+    /* Add max-width for larger screens */
+    margin: 0 auto;
+    /* Center the container */
     border: 5px solid;
     border-radius: 10px;
     border-image: linear-gradient(45deg, #f4ded8, #f1c29e) 1;
-    /* Gradient border */
-
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+    display: flex;
+    flex-direction: column;
 }
 
 .return-policy h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
     font-style: italic;
-    font-size: 2em;
-
+    padding: 0 20px;
+    /* Add horizontal padding to match body */
 }
 
 .return-policy .effective-date {
     margin-bottom: 20px;
     color: #007bff;
     font-style: normal;
+    padding: 0 20px;
+text-align: center; 
+    width: 100%; 
+    font-size: 1.1rem;
 }
 
 .return-policy .thank-you-message {
@@ -33,14 +43,18 @@
     font-weight: bold;
     text-align: justify;
     border-bottom: dashed 2px black;
-    text-align: justify;
     font-size: 1.5em;
+    padding: 0 20px 20px 20px;
+    /* Add consistent padding */
+    margin-bottom: 20px;
 }
 
 .return-policy .red-bold-item {
     color: red;
     font-weight: bold;
     text-align: left;
+    padding: 0 20px;
+    /* Add horizontal padding */
 }
 
 .return-policy .black-bold-numbers li::marker {
@@ -52,34 +66,81 @@
     font-weight: bold;
     color: black;
     text-align: left;
+    padding: 0 20px;
+    /* Add horizontal padding */
+}
+
+/* Add padding to list items */
+.return-policy ul,
+.return-policy ol {
+    padding: 0 40px;
+    /* Add padding for lists */
+}
+
+.back-button {
+    margin-bottom: 20px;
+  padding: 8px 20px;
+    background-color: #e9ecef;
+    color: #495057;
+    border: 2px solid #030303;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.back-button:hover {
+    background-color: #dee2e6;
+  border-color: #070707;
 }
 
 /* Media Queries for Tablets */
 @media (max-width: 992px) {
+    .return-policy {
+        padding: 15px;
+    }
+
+    .return-policy h2 {
+        padding: 0 15px;
+    }
+
     .return-policy .thank-you-message {
         font-size: 1.5em;
-        /* Adjust font size for tablets */
-        padding: 10px;
-        /* Add padding for better readability */
+        padding: 0 15px 15px 15px;
     }
 }
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
+    .return-policy {
+        padding: 10px;
+    }
+
+    .return-policy h2 {
+        font-size: 1.75rem;
+        padding: 0 10px;
+    }
+
     .return-policy .thank-you-message {
         font-size: 1.2em;
-        /* Adjust font size for mobile devices */
-        padding: 8px;
-        /* Add padding for better readability */
+        padding: 0 10px 10px 10px;
     }
 }
 
 /* Media Queries for Small Mobile Devices */
 @media (max-width: 480px) {
+    .return-policy {
+        padding: 8px;
+    }
+
+    .return-policy h2 {
+        font-size: 1.5rem;
+        padding: 0 8px;
+    }
+
     .return-policy .thank-you-message {
         font-size: 1em;
-        /* Adjust font size for small mobile devices */
-        padding: 5px;
-        /* Add padding for better readability */
+        padding: 0 8px 8px 8px;
     }
 }
